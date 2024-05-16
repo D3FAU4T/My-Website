@@ -1,0 +1,260 @@
+@font-face {
+    font-family: 'Google Sans';
+    src: url(fonts/Google-Sans.woff2) format('woff2');
+}
+
+:root {
+    --html-background-color: #1c1f28;
+    --element-background-color: #10131b;
+    --md-sys-color-primary: #afc6ff;
+    --hover-color: #2c2f38;
+    --text-color: #ffffff;
+    --small-text-color: #e0e2ed;
+    --md-sys-color-on-surface: #ffffff;
+    --md-sys-color-surface: #1c1f28;
+    --option-cover-color: #414755;
+}
+
+[slot="trailing-supporting-text"] {
+    width: 30px;
+    text-align: end;
+}
+
+* {
+    color: var(--text-color);
+    font-family: 'Google Sans', 'Roboto', system-ui;
+}
+
+body {
+    background-color: var(--html-background-color);
+    overflow-y: hidden;
+}
+
+.container {
+    display: flex;
+}
+
+main {
+    position: relative;
+    height: calc(100svh - 5rem);
+    background-color: var(--element-background-color);
+    border-radius: 2rem;
+    flex-grow: 1;
+    margin: 15px;
+    margin-top: 0px;
+    justify-content: center;
+}
+
+.scrollbar-wrapper {
+    overflow-y: auto;
+    max-height: 100%;
+    border-radius: inherit;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.scrollbar-wrapper::-webkit-scrollbar-track {
+    background: #000000;
+    border-radius: 3rem;
+}
+
+.scrollbar-wrapper::-webkit-scrollbar-thumb {
+    background: var(--md-sys-color-primary);
+    border-radius: 3rem;
+}
+
+.scrollbar-wrapper::-webkit-scrollbar-button {
+    display: block;
+    height: 10px;
+    width: 10px;
+}
+
+.scrollbar-wrapper::-webkit-scrollbar {
+    width: 7px;
+}
+
+section {
+    padding: 2rem;
+    padding-top: 0px;
+}
+
+section>h1, section>*>h1 {
+    font-size: 88px;
+}
+
+section>p>a {
+    text-decoration: none;
+    color: var(--md-sys-color-primary);
+}
+
+.Webpage-Name {
+    color: var(--md-sys-color-primary);
+    font-size: 22px;
+    text-decoration: none;
+    padding: 0px 12px;
+    margin-top: 7px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 15px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+header>a {
+    margin-bottom: 11px;
+}
+
+header>md-list-item {
+    border-radius: 15px;
+}
+
+.navbar {
+    width: 13rem;
+    height: 100%;
+    transition: ease-in-out 250ms;
+    transition-property: width;
+}
+
+.overview {
+    background-color: var(--element-background-color);
+    border-radius: 2rem;
+    padding-bottom: calc(100svh - 5rem);
+    margin: 15px;
+    margin-top: 0px;
+    padding: 2rem;
+    height: auto;
+    min-width: 170px;
+}
+
+.overview>p:first-child {
+    font-size: 11px;
+    color: var(--small-text-color);
+}
+
+.overview>h2 {
+    font-size: 24px;
+    margin: 8px 0px 12px;
+}
+
+.overview>ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+.overview>ul>li {
+    margin: 8px 0px;
+}
+
+.overview>ul>li>a {
+    color: var(--md-sys-color-primary);
+    text-decoration: none;
+}
+
+md-item {
+    pointer-events: none;
+}
+
+md-list-item {
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.selected {
+    background-color: #40434b;
+}
+
+.question {
+    margin-bottom: 70px;
+}
+
+theme-changer {
+    position: absolute;
+    right: 25px;
+    top: 5rem;
+    background-color: var(--html-background-color);
+    border-radius: 2rem;
+    height: auto;
+    z-index: 1;
+    padding: 10px;
+    padding-left: 20px;
+    box-shadow: 0px 0px 10px 0px #000000;
+}
+
+.theme-copy {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+
+.option-cover {
+    background-color: var(--option-cover-color);
+    border-radius: 2rem;
+    height: auto;
+    padding: 10px;
+}
+
+.color-adjustment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+theme-option {
+    display: flex;
+    flex-direction: column;
+}
+
+theme-option > p {
+    padding-left: 17px;
+}
+
+.hue {
+    position: absolute;
+    width: 11rem;
+    height: 15px;
+    border-radius: 2rem;
+    left: 50px;
+    top: 11.5rem;
+}
+
+table {
+    display: table;
+    margin-top: 200px;
+    border-radius: 1rem;
+}
+
+th {
+    background-color: var(--html-background-color);
+    padding: 10px;
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        width: 0px;
+    }
+
+    header {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    main {
+        margin: auto;
+        height: calc(100svh - 5rem);
+    }
+
+    section>h1 {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .overview {
+        display: none;
+    }
+}
