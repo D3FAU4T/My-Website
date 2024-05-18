@@ -125,7 +125,7 @@ function setThemeMode(mode) {
         root.style.setProperty('--option-cover-color', '#dbe3ed');
         root.style.setProperty('--small-text-color', '#000000');
         root.style.setProperty('--selected', '#dbe3ed');
-        root.style.setProperty('--hover-color', `hsl(${hueColor}, 100%, 70%)`);
+        root.style.setProperty('--hover-color', `var(--md-sys-color-primary)`);
         localStorage.setItem('theme', 'white');
     } else {
         root.style.setProperty('--md-sys-color-background', '#10131b');
