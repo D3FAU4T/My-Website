@@ -233,6 +233,43 @@ th {
     padding: 10px;
 }
 
+.card {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    border: none;
+    border-radius: 1rem;
+    background-color: var(--html-background-color);
+}
+
+.card:hover {
+    cursor: pointer;
+    background-color: var(--hover-color);
+}
+
+.img-wrapper {
+    order: 0;
+}
+
+.img-wrapper > img {
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.img-desc {
+    order: 1;
+    padding: 24px;
+    padding-top: 0px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+}
+
 @media (max-width: 900px) {
     .navbar {
         width: 0px;
@@ -256,5 +293,11 @@ th {
 @media (max-width: 1200px) {
     .overview {
         display: none;
+    }
+}
+
+@media (max-width: 620px) {
+    .card-container {
+        grid-template-columns: auto;
     }
 }
