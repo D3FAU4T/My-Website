@@ -270,6 +270,10 @@ th {
     gap: 20px;
 }
 
+.card-container > a {
+    text-decoration: none;
+}
+
 @media (max-width: 900px) {
     .navbar {
         width: 0px;

@@ -18,7 +18,6 @@ $('hamBtn').addEventListener('click', () => {
 
 const sidebarButtons = [
     { id: 'evsButton', pageName: 'EVS Assignment' },
-    // { id: 'qwordle', pageName: 'QWordle' },
     { id: 'onrizon', pageName: 'Onrizon Games' },
     { id: 'itSkillButton', pageName: 'IT-Skills' }
 ];
