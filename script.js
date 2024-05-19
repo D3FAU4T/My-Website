@@ -62,6 +62,7 @@ $('hamBtn').addEventListener('click', () => {
 const sidebarButtons = [
     { id: 'evsButton', pageName: 'EVS Assignment' },
     { id: 'onrizon', pageName: 'Onrizon Games' },
+    { id: 'wordles', pageName: 'Wordles' },
     { id: 'itSkillButton', pageName: 'IT-Skills' }
 ];
 
@@ -126,6 +127,7 @@ function setThemeMode(mode) {
         root.style.setProperty('--small-text-color', '#000000');
         root.style.setProperty('--selected', '#dbe3ed');
         root.style.setProperty('--hover-color', `var(--md-sys-color-primary)`);
+        $$('#wordleIcon > g').style.fill = '#000000';
         localStorage.setItem('theme', 'white');
     } else {
         root.style.setProperty('--md-sys-color-background', '#10131b');
@@ -135,6 +137,7 @@ function setThemeMode(mode) {
         root.style.setProperty('--small-text-color', '#e0e2ed');
         root.style.setProperty('--selected', '#33353a');
         root.style.setProperty('--hover-color', `#2c2f38`);
+        $$('#wordleIcon > g').style.fill = '#ffffff';
         localStorage.setItem('theme', 'dark');
     }
 }
