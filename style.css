@@ -53,23 +53,27 @@ main {
     scroll-behavior: smooth;
 }
 
-.scrollbar-wrapper::-webkit-scrollbar-track {
+.scrollbar-wrapper::-webkit-scrollbar-track,
+.overview::-webkit-scrollbar-track {
     background: #000000;
     border-radius: 3rem;
 }
 
-.scrollbar-wrapper::-webkit-scrollbar-thumb {
+.scrollbar-wrapper::-webkit-scrollbar-thumb,
+.overview::-webkit-scrollbar-thumb {
     background: var(--md-sys-color-primary);
     border-radius: 3rem;
 }
 
-.scrollbar-wrapper::-webkit-scrollbar-button {
+.scrollbar-wrapper::-webkit-scrollbar-button,
+.overview::-webkit-scrollbar-button {
     display: block;
     height: 10px;
     width: 10px;
 }
 
-.scrollbar-wrapper::-webkit-scrollbar {
+.scrollbar-wrapper::-webkit-scrollbar,
+.overview::-webkit-scrollbar {
     width: 7px;
 }
 
@@ -123,14 +127,17 @@ header>md-list-item {
 }
 
 .overview {
+    position: relative;
+    height: calc(100svh - 9rem + 2px);
     background-color: var(--md-sys-color-background);
     border-radius: 2rem;
-    padding-bottom: calc(100svh - 5rem);
     margin: 15px;
     margin-top: 0px;
     padding: 2rem;
-    height: auto;
     min-width: 170px;
+    overflow-y: auto;
+    max-height: 100%;
+    scroll-behavior: smooth;
 }
 
 .overview>p:first-child {
