@@ -186,7 +186,8 @@ md-list-item > p {
     color: var(--md-sys-color-primary);
 }
 
-.selected > svg > defs > g > path {
+.selected > svg > defs > g > path,
+.selected > svg > g {
     fill: var(--md-sys-color-primary);
 }
 
@@ -287,6 +288,14 @@ th {
     order: 1;
     padding: 24px;
     padding-top: 0px;
+}
+
+.img-desc > div {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+    padding: 0px;
+    height: 60px;
 }
 
 .card-container {
