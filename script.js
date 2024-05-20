@@ -74,11 +74,11 @@ sidebarButtons.forEach(button => {
     });
 });
 
-async function loadData(pageName) {
+async function loadData(pageName, path = undefined) {
     try {
         const [contentResponse, contextResponse] = await Promise.all([
-            fetch(`/Contents/${pageName}.html`),
-            fetch(`/Contexts/${pageName}.html`)
+            path ? fetch(`Subjects/${path}.html`) : fetch(`/Contents/${pageName}.html`),
+            path ? fetch(`Subjects/${path}c.html`) : fetch(`/Contexts/${pageName}.html`)
         ]);
 
         if (!contentResponse.ok || !contextResponse.ok) {
