@@ -86,7 +86,7 @@ section>h1, section>*>h1 {
     font-size: 88px;
 }
 
-section>p>a {
+a {
     text-decoration: none;
     color: var(--md-sys-color-primary);
 }
@@ -157,11 +157,6 @@ header>md-list-item {
 
 .overview>ul>li {
     margin: 8px 0px;
-}
-
-.overview>ul>li>a {
-    color: var(--md-sys-color-primary);
-    text-decoration: none;
 }
 
 md-item {
@@ -269,7 +264,8 @@ th {
     background-color: var(--md-sys-color-surface);
 }
 
-.card:hover {
+.card:hover,
+.note:hover {
     cursor: pointer;
     background-color: var(--hover-color);
 }
@@ -312,6 +308,18 @@ th {
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
+}
+
+.note {
+    border: 1px solid var(--md-sys-color-text);
+    border-radius: 2rem;
+    padding: 15px;
+}
+
+.note-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
 }
 
 @media (max-width: 900px) {
