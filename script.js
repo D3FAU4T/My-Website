@@ -63,7 +63,8 @@ const sidebarButtons = [
     { id: 'evsButton', pageName: 'EVS Assignment' },
     { id: 'onrizon', pageName: 'Onrizon Games' },
     { id: 'wordles', pageName: 'Wordles' },
-    { id: 'itSkillButton', pageName: 'IT-Skills' }
+    { id: 'itSkillButton', pageName: 'IT-Skills' },
+    { id: 'communitygames', pageName: 'Community Games' },
 ];
 
 sidebarButtons.forEach(button => {

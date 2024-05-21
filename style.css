@@ -322,6 +322,13 @@ th {
     gap: 20px;
 }
 
+.iconed-heading {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: center;
+}
+
 @media (max-width: 900px) {
     .navbar {
         width: 0px;
