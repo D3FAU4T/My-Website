@@ -182,7 +182,8 @@ md-list-item > p {
 }
 
 .selected > svg > defs > g > path,
-.selected > svg > g {
+.selected > svg > g,
+.selected > svg > g > path {
     fill: var(--md-sys-color-primary);
 }
 
