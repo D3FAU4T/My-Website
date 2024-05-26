@@ -13,6 +13,9 @@
     --md-sys-color-surface: #1c1f28;
     --option-cover-color: #414755;
     --selected: #33353a;
+    --link-color: var(--md-sys-color-primary);
+    --note-border-color-hover: var(--md-sys-color-text);
+    --link-decoration: none;
 }
 
 [slot="trailing-supporting-text"] {
@@ -36,9 +39,9 @@ body {
 
 main {
     position: relative;
-    height: calc(100svh - 5rem);
+    height: calc(100svh - 5em);
     background-color: var(--md-sys-color-background);
-    border-radius: 2rem;
+    border-radius: 2em;
     flex-grow: 1;
     margin: 15px;
     margin-top: 0px;
@@ -56,13 +59,13 @@ main {
 .scrollbar-wrapper::-webkit-scrollbar-track,
 .overview::-webkit-scrollbar-track {
     background: #000000;
-    border-radius: 3rem;
+    border-radius: 3em;
 }
 
 .scrollbar-wrapper::-webkit-scrollbar-thumb,
 .overview::-webkit-scrollbar-thumb {
     background: var(--md-sys-color-primary);
-    border-radius: 3rem;
+    border-radius: 3em;
 }
 
 .scrollbar-wrapper::-webkit-scrollbar-button,
@@ -78,11 +81,12 @@ main {
 }
 
 section {
-    padding: 2rem;
+    padding: 2em;
     padding-top: 0px;
 }
 
-section>h1, section>*>h1 {
+section>h1,
+section>*>h1 {
     font-size: 88px;
 }
 
@@ -98,7 +102,7 @@ a {
     margin-top: 7px;
 }
 
-.Webpage-Name > b {
+.Webpage-Name>b {
     color: var(--md-sys-color-primary);
 }
 
@@ -120,7 +124,7 @@ header>md-list-item {
 }
 
 .navbar {
-    width: 13rem;
+    width: 13em;
     height: 100%;
     transition: ease-in-out 250ms;
     transition-property: width;
@@ -128,12 +132,12 @@ header>md-list-item {
 
 .overview {
     position: relative;
-    height: calc(100svh - 9rem + 2px);
+    height: calc(100svh - 9em + 2px);
     background-color: var(--md-sys-color-background);
-    border-radius: 2rem;
+    border-radius: 2em;
     margin: 15px;
     margin-top: 0px;
-    padding: 2rem;
+    padding: 2em;
     min-width: 170px;
     overflow-y: auto;
     max-height: 100%;
@@ -164,11 +168,11 @@ md-item {
 }
 
 md-list-item {
-    border-radius: 2rem;
+    border-radius: 2em;
     cursor: pointer;
 }
 
-md-list-item > p {
+md-list-item>p {
     margin: 0px;
 }
 
@@ -176,14 +180,14 @@ md-list-item > p {
     background-color: var(--selected);
 }
 
-.selected > p,
-.selected > span {
+.selected>p,
+.selected>span {
     color: var(--md-sys-color-primary);
 }
 
-.selected > svg > defs > g > path,
-.selected > svg > g,
-.selected > svg > g > path {
+.selected>svg>defs>g>path,
+.selected>svg>g,
+.selected>svg>g>path {
     fill: var(--md-sys-color-primary);
 }
 
@@ -194,9 +198,9 @@ md-list-item > p {
 theme-changer {
     position: absolute;
     right: 10px;
-    top: 4rem;
+    top: 4em;
     background-color: var(--md-sys-color-surface);
-    border-radius: 2rem;
+    border-radius: 2em;
     height: auto;
     z-index: 1;
     padding: 10px;
@@ -221,7 +225,7 @@ theme-changer.visible {
 .option-cover {
     position: relative;
     background-color: var(--option-cover-color);
-    border-radius: 2rem;
+    border-radius: 2em;
     height: auto;
     padding: 10px;
 }
@@ -231,23 +235,23 @@ theme-option {
     flex-direction: column;
 }
 
-theme-option > p {
+theme-option>p {
     padding-left: 17px;
 }
 
 .hue {
     position: inherit;
-    width: 11rem;
+    width: 11em;
     height: 15px;
-    border-radius: 2rem;
-    background:linear-gradient(to right, #e7007d 0%, #e90070 1%, #ea0064 2%, #eb0057 3%, #ec044a 4%, #ec0e3d 5%, #eb162f 6%, #ea1c1f 7%, #e92207 8%, #e03400 9%, #d84200 10%, #d04b00 11%, #ca5100 12%, #c45600 13%, #bf5b00 14%, #ba5e00 15%, #b56100 16%, #b16400 17%, #ad6600 18%, #a96800 19%, #a56a00 20%, #a26c00 21%, #9e6e00 22%, #9b7000 23%, #977100 24%, #937300 25%, #907400 26%, #8c7600 27%, #887700 28%, #847800 29%, #7f7a00 30%, #7a7b00 31%, #757d00 32%, #6f7e00 33%, #698000 34%, #618200 35%, #588300 36%, #4c8500 37%, #3d8700 38%, #238a00 39%, #008b18 40%, #008a2f 41%, #008a3d 42%, #008948 43%, #008951 44%, #008858 45%, #00885f 46%, #008865 47%, #00876a 48%, #00876f 49%, #008673 50%, #008677 51%, #00867b 52%, #00857f 53%, #008583 54%, #008586 55%, #00848a 56%, #00848d 57%, #008491 58%, #008394 59%, #008398 60%, #00829c 61%, #00829f 62%, #0081a3 63%, #0081a7 64%, #0080ac 65%, #007fb1 66%, #007fb6 67%, #007ebb 68%, #007dc1 69%, #007bc8 70%, #007ad0 71%, #0078da 72%, #0075e5 73%, #0072f2 74%, #126eff 75%, #326bff 76%, #4568ff 77%, #5365ff 78%, #5f62ff 79%, #695fff 80%, #735bff 81%, #7d57ff 82%, #8653ff 83%, #8e4eff 84%, #9748ff 85%, #a040ff 86%, #aa37ff 87%, #b329ff 88%, #be0dff 89%, #c400f6 90%, #ca00ea 91%, #ce00de 92%, #d300d2 93%, #d600c6 94%, #da00ba 95%, #dd00ad 96%, #e000a1 97%, #e20095 98%, #e50089 99%);
+    border-radius: 2em;
+    background: linear-gradient(to right, #e7007d 0%, #e90070 1%, #ea0064 2%, #eb0057 3%, #ec044a 4%, #ec0e3d 5%, #eb162f 6%, #ea1c1f 7%, #e92207 8%, #e03400 9%, #d84200 10%, #d04b00 11%, #ca5100 12%, #c45600 13%, #bf5b00 14%, #ba5e00 15%, #b56100 16%, #b16400 17%, #ad6600 18%, #a96800 19%, #a56a00 20%, #a26c00 21%, #9e6e00 22%, #9b7000 23%, #977100 24%, #937300 25%, #907400 26%, #8c7600 27%, #887700 28%, #847800 29%, #7f7a00 30%, #7a7b00 31%, #757d00 32%, #6f7e00 33%, #698000 34%, #618200 35%, #588300 36%, #4c8500 37%, #3d8700 38%, #238a00 39%, #008b18 40%, #008a2f 41%, #008a3d 42%, #008948 43%, #008951 44%, #008858 45%, #00885f 46%, #008865 47%, #00876a 48%, #00876f 49%, #008673 50%, #008677 51%, #00867b 52%, #00857f 53%, #008583 54%, #008586 55%, #00848a 56%, #00848d 57%, #008491 58%, #008394 59%, #008398 60%, #00829c 61%, #00829f 62%, #0081a3 63%, #0081a7 64%, #0080ac 65%, #007fb1 66%, #007fb6 67%, #007ebb 68%, #007dc1 69%, #007bc8 70%, #007ad0 71%, #0078da 72%, #0075e5 73%, #0072f2 74%, #126eff 75%, #326bff 76%, #4568ff 77%, #5365ff 78%, #5f62ff 79%, #695fff 80%, #735bff 81%, #7d57ff 82%, #8653ff 83%, #8e4eff 84%, #9748ff 85%, #a040ff 86%, #aa37ff 87%, #b329ff 88%, #be0dff 89%, #c400f6 90%, #ca00ea 91%, #ce00de 92%, #d300d2 93%, #d600c6 94%, #da00ba 95%, #dd00ad 96%, #e000a1 97%, #e20095 98%, #e50089 99%);
     margin-left: 16px;
 }
 
 table {
     display: table;
     margin-top: 200px;
-    border-radius: 1rem;
+    border-radius: 1em;
 }
 
 th {
@@ -261,7 +265,7 @@ th {
     width: auto;
     height: 100%;
     border: none;
-    border-radius: 1rem;
+    border-radius: 1em;
     background-color: var(--md-sys-color-surface);
 }
 
@@ -269,16 +273,23 @@ th {
 .note:hover {
     cursor: pointer;
     background-color: var(--hover-color);
+    border-color: var(--note-border-color-hover);
+}
+
+.note:hover a {
+    color: var(--link-color);
+    text-decoration: var(--link-decoration);
+    text-decoration-style: wavy;
 }
 
 .img-wrapper {
     order: 0;
 }
 
-.img-wrapper > img {
+.img-wrapper>img {
     height: 100%;
     width: 100%;
-    border-radius: 1rem;
+    border-radius: 1em;
 }
 
 .img-desc {
@@ -287,7 +298,7 @@ th {
     padding-top: 0px;
 }
 
-.img-desc > div {
+.img-desc>div {
     display: flex;
     justify-content: space-between;
     margin: 0px;
@@ -297,11 +308,12 @@ th {
 
 .card-container {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
+    width: 100%;
 }
 
-.card-container > a {
+.card-container>a {
     text-decoration: none;
 }
 
@@ -313,21 +325,51 @@ th {
 
 .note {
     border: 1px solid var(--md-sys-color-text);
-    border-radius: 2rem;
+    border-radius: 2em;
     padding: 15px;
-}
-
-.note-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 20px;
+    width: auto;
+    box-sizing: border-box;
 }
 
 .iconed-heading {
     display: flex;
     flex-direction: row;
-    gap: 1.5rem;
+    gap: 1.5em;
     align-items: center;
+}
+
+.note>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flag {
+    display: flex;
+    height: 30px;
+    width: -moz-fit-content;
+    width: fit-content;
+    border: 1px solid var(--note-border-color-hover);
+    border-radius: 2em;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px;
+    white-space: nowrap;
+}
+
+.flag>p {
+    padding-right: 5px;
+}
+
+.status {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.status > .flag {
+    margin-left: 15px;
 }
 
 @media (max-width: 900px) {
@@ -342,7 +384,7 @@ th {
 
     main {
         margin: auto;
-        height: calc(100svh - 5rem);
+        height: calc(100svh - 5em);
     }
 
     section>h1 {
