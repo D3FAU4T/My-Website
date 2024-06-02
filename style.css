@@ -249,14 +249,39 @@ theme-option>p {
 }
 
 table {
-    display: table;
-    margin-top: 200px;
+    border: 1px solid var(--md-sys-color-primary);
     border-radius: 1em;
+    border-spacing: 0;
 }
 
 th {
     background-color: var(--md-sys-color-surface);
+    padding: 20px;
+}
+
+th, td {
+    border: 1px solid var(--md-sys-color-primary);
+}
+
+td {
     padding: 10px;
+    text-align: center;
+}
+
+tr > th:first-child {
+    border-top-left-radius: 1em;
+}
+
+tr > th:last-child {
+    border-top-right-radius: 1em;
+}
+
+tr:last-child > td:last-child {
+    border-bottom-right-radius: 1em;
+}
+
+tr:last-child > td:first-child {
+    border-bottom-left-radius: 1em;
 }
 
 .card {
