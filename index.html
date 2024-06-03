@@ -11,12 +11,12 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <script type="importmap">
-          {
-            "imports": {
-              "@material/web/": "https://esm.run/@material/web/"
-            }
+        {
+          "imports": {
+            "@material/web/": "https://esm.run/@material/web/"
           }
-        </script>
+        }
+    </script>
     <script type="module">
         import '@material/web/all.js';
         import { styles as typescaleStyles } from '@material/web/typography/md-typescale-styles.js';
@@ -74,6 +74,11 @@
                 <md-list-item type="button" id="syllabus">
                     <p>Syllabus</p>
                     <span slot="start" class="material-symbols-outlined">description</span>
+                </md-list-item>
+
+                <md-list-item type="button" id="mar">
+                    <p>MAR Points</p>
+                    <span slot="start" class="material-symbols-outlined">event_note</span>
                 </md-list-item>
 
                 <md-item>
@@ -150,7 +155,13 @@
         </aside>
         <main>
             <section class="scrollbar-wrapper" id="section">
-                <h1 style="display: flex; justify-content: center;">"I always email my friends a Lorem ipsum, that's how we show we care for each other"</h1>
+                <!-- <h1>I always email my friends a Lorem ipsum text, that's how we show we care for each other</h1> -->
+                <h1>Welcome to D3FAU4T's Space</h1>
+                <h3>This is a practice project made by D3FAU4T (14542723127) to showcase the beauty of Web Designing through HTML, CSS and JS. This website includes some shortcuts for important informations related to my institute as well as fun stuff to explore. This website is responsive, static (Might change to dynamic in future) and it uses <a href="https://material-web.dev/about/intro/">Material Web</a> Framework.</h3>
+
+                <h4>Use the menu button to get started (Hamburger icon)</h4>
+
+                <h4>Curious about my work? Inspect the webpage or visit my <a href="https://github.com/D3FAU4T">Github</a></h4>
             </section>
         </main>
         <aside class="overview" id="overview">
