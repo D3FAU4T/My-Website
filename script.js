@@ -92,8 +92,21 @@ async function loadData(pageName, path = undefined) {
             contextResponse.text()
         ]);
 
-        $('section').innerHTML = contentData;
-        $('overview').innerHTML = contextData;
+        const section = $('section');
+        const overview = $('overview');
+        section.innerHTML = contentData;
+        overview.innerHTML = contextData;
+        section.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'instant',
+        });
+
+        overview.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'instant',
+        });
     } catch (error) {
         console.error(error);
     }
