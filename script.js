@@ -2,7 +2,7 @@ const $ = (id) => document.getElementById(id);
 const $$ = (querySelector) => document.querySelector(querySelector);
 
 let isSidebarOpen = false;
-let hueColor = 0;
+let hueColor = 209;
 let currentTabId;
 
 if (window.innerWidth >= 900) isSidebarOpen = true;
@@ -25,11 +25,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const savedHue = localStorage.getItem('hueValue');
     const savedTheme = localStorage.getItem('theme');
-    setThemeMode(savedTheme || 'white');
+    setThemeMode(savedTheme || 'dark');
 
     if (savedHue !== null) {
         hueSlider.value = savedHue;
         setColors(savedHue);
+    }
+
+    else {
+        hueSlider.value = hueColor;
+        setColors(hueColor);
     }
 
     paletteBtn.addEventListener('click', () => {
