@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     $('themeCopy').addEventListener('click', () => {
         $$('#themeCopy > span').textContent = 'check';
-        navigator.clipboard.writeText(`hsl(${hueColor}, 100%, 70%)`);
+        navigator.clipboard.writeText(hslToHex(hueColor, 100, 70));
         setTimeout(() => $$('#themeCopy > span').textContent = 'Content_Copy', 500);
     });
 
@@ -74,13 +74,13 @@ const sidebarButtons = [
     { id: 'mar', pageName: 'MAR' },
 ];
 
-sidebarButtons.forEach(button => {
+sidebarButtons.forEach(button => 
     $(button.id).addEventListener('click', async () => {
         await loadData(button.pageName);
         shiftSelectedTab(button.id);
         if (window.innerWidth < 900) closeSidebar();
-    });
-});
+    })
+);
 
 async function loadData(pageName, path = undefined) {
     try {
@@ -136,6 +136,19 @@ function openSidebar() {
     navbar.style.display = 'block';
     setTimeout(() => navbar.style.width = '13rem', 10);
     isSidebarOpen = true;
+}
+
+function hslToHex(hue, saturation, lightness) {
+    lightness /= 100;
+    const chroma = saturation * Math.min(lightness, 1 - lightness) / 100;
+    
+    const getColorComponent = offset => {
+        const componentHue = (offset + hue / 30) % 12;
+        const color = lightness - chroma * Math.max(Math.min(componentHue - 3, 9 - componentHue, 1), -1);
+        return Math.round(255 * color).toString(16).padStart(2, '0');   // Convert to Hex and pad with '0' if needed
+    };
+
+    return `#${getColorComponent(0)}${getColorComponent(8)}${getColorComponent(4)}`;
 }
 
 function setThemeMode(mode) {
