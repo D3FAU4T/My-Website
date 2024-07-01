@@ -39,7 +39,7 @@ body {
 
 main {
     position: relative;
-    height: calc(100svh - 5em);
+    height: calc(100svh - 5rem);
     background-color: var(--md-sys-color-background);
     border-radius: 2em;
     flex-grow: 1;
@@ -124,10 +124,12 @@ header>md-list-item {
 }
 
 .navbar {
+    position: absolute;
     width: 13em;
-    height: 100%;
+    height: calc(100svh - 5em);
     transition: ease-in-out 250ms;
     transition-property: width;
+    z-index: 1;
 }
 
 .overview {
@@ -409,7 +411,7 @@ tr:last-child > td:first-child {
 
     main {
         margin: auto;
-        height: calc(100svh - 5em);
+        height: calc(100svh - 5rem);
     }
 
     section>h1 {
