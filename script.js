@@ -5,14 +5,8 @@ let isSidebarOpen = false;
 let hueColor = 209;
 let currentTabId;
 
-if (window.innerWidth >= 900) isSidebarOpen = true;
-
-window.addEventListener('resize', () => {
-    if (window.innerWidth >= 900) isSidebarOpen = true;
-    else isSidebarOpen = false;
-});
-
 document.addEventListener('DOMContentLoaded', () => {
+    closeSidebar();
     const hueSlider = $('hue-slider');
     const themeChanger = $$('theme-changer');
     const paletteBtn = $('paletteBtn');
@@ -37,9 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setColors(hueColor);
     }
 
-    paletteBtn.addEventListener('click', () => {
-        themeChanger.classList.toggle('visible');
-    });
+    paletteBtn.addEventListener('click', () => themeChanger.classList.toggle('visible'));
 
     $('themeCopy').addEventListener('click', () => {
         $$('#themeCopy > span').textContent = 'check';
@@ -78,7 +70,7 @@ sidebarButtons.forEach(button =>
     $(button.id).addEventListener('click', async () => {
         await loadData(button.pageName);
         shiftSelectedTab(button.id);
-        if (window.innerWidth < 900) closeSidebar();
+        closeSidebar();
     })
 );
 
