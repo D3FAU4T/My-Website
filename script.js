@@ -64,6 +64,7 @@ const sidebarButtons = [
     { id: 'communitygames', pageName: 'Community Games' },
     { id: 'syllabus', pageName: 'Syllabus' },
     { id: 'mar', pageName: 'MAR' },
+    { id: 'pythonButton', pageName: 'Python' }
 ];
 
 sidebarButtons.forEach(button => 
@@ -105,6 +106,8 @@ async function loadData(pageName, path = undefined) {
             left: 0,
             behavior: 'instant',
         });
+
+        hljs.highlightAll();
     } catch (error) {
         console.error(error);
     }
@@ -114,6 +117,13 @@ function shiftSelectedTab(tabId) {
     if (currentTabId) $(currentTabId).classList.remove('selected');
     currentTabId = tabId;
     $(currentTabId).classList.add('selected');
+}
+
+function copyContent(id) {
+    const icon = $(`${id}i`);
+    icon.textContent = "check";
+    navigator.clipboard.writeText($(`${id}code`).textContent);
+    setTimeout(() => icon.textContent = "content_copy", 500);
 }
 
 function closeSidebar() {

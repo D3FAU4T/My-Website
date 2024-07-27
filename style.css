@@ -178,6 +178,11 @@ md-list-item>p {
     margin: 0px;
 }
 
+#linear0 > stop,
+#linear1 > stop {
+    stop-color: white;
+}
+
 .selected {
     background-color: var(--selected);
 }
@@ -193,8 +198,21 @@ md-list-item>p {
     fill: var(--md-sys-color-primary);
 }
 
+.selected>svg>defs>linearGradient>stop {
+    stop-color: var(--md-sys-color-primary) !important;
+}
+
 .question {
     margin-bottom: 70px;
+}
+
+.answer {
+    margin-bottom: 70px;
+    margin-top: -40px;
+}
+
+.hljs-number {
+    color: yellow;
 }
 
 theme-changer {
@@ -397,6 +415,51 @@ tr:last-child > td:first-child {
 
 .status > .flag {
     margin-left: 15px;
+}
+
+code {
+    color: rgb(231, 15, 231) !important;
+    border: 1px solid white;
+    border-top: 0px;
+    border-radius: 1rem;
+    background-color: var(--md-sys-color-background) !important;
+    margin-top: -20px;
+    padding: 0px 10px 30px 30px !important;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+pre {
+    margin-bottom: 0px;
+}
+
+.codeName {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 10px;
+    background-color: var(--md-sys-color-surface);
+    border: 1px solid white;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    height: 50px;
+}
+
+.codeName > p {
+    margin: 0px;
+}
+
+.codeName > button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 1rem;
+    padding: 10px;
+}
+
+.codeName > button:hover {
+    background-color: var(--hover-color);
 }
 
 @media (max-width: 900px) {
