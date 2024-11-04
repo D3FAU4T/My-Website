@@ -37,7 +37,7 @@ const NavBar = (Props: Options) => {
     return (
         <aside className="navbar" ref={bar}>
             <md-list className="scrollbar-wrapper" role="menubar" suppressHydrationWarning>
-                <md-item suppressHydrationWarning>
+                <md-item role="menuitem" suppressHydrationWarning>
                     <div slot="headline">Study Materials</div>
                     <span slot="end" className="material-symbols-outlined">collections_bookmark</span>
                 </md-item>
@@ -45,11 +45,11 @@ const NavBar = (Props: Options) => {
                     <p>Syllabus</p>
                     <span slot="start" className="material-symbols-outlined">description</span>
                 </md-list-item>
-                <md-list-item type="button" id="MAR" suppressHydrationWarning>
+                <md-list-item type="button" id="MAR" onClick={() => router.push('/marpts')} suppressHydrationWarning>
                     <p>MAR Points</p>
                     <span slot="start" className="material-symbols-outlined">event_note</span>
                 </md-list-item>
-                <md-list-item type="button" id="Assignment" suppressHydrationWarning>
+                <md-list-item type="button" id="Assignment" onClick={() => router.push('/assignments')} suppressHydrationWarning>
                     <p>Assignments</p>
                     <span slot="start" className="material-symbols-outlined">assignment</span>
                 </md-list-item>
