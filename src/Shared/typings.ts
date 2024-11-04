@@ -31,9 +31,7 @@ export interface WordleOptions extends GameOptions {
 
 export interface AssignmentOptions {
     Name: string;
-    Subject: string;
-    SubjectIcon: string;
-    Description: string;
+    Description: JSX.Element[];
     DueDate: string;
-    Status: string;
+    Status: "Pending" | "Turned-in" | "Done";
 }
