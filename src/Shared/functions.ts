@@ -29,7 +29,7 @@ export const setThemeMode = (mode: "white" | "dark") => {
         root.style.setProperty(`--link-color`, `var(--md-sys-color-primary)`);
         root.style.setProperty('--note-border-color-hover', `var(--md-sys-color-primary)`);
         root.style.setProperty('--link-decoration', `none`);
-        // (document.querySelector('#wordleIcon > g') as SVGGElement).style.fill = '#ffffff';
+        (document.querySelector('#wordleIcon > g') as SVGGElement).style.fill = '#ffffff';
         localStorage.setItem('theme', 'dark');
     }
 }

@@ -3,8 +3,8 @@
 import '@material/web/list/list';
 import '@material/web/list/list-item';
 
-import OnrizonSVG from "../../public/onrizon.svg";
-import WordlesSVG from "../../public/wordles.svg";
+import OnrizonSVG from "@/SVG/Onrizon";
+import WordlesSVG from "@/SVG/Wordle";
 
 import { useRouter } from 'next/navigation';
 import { useRef, useEffect } from "react";
@@ -59,11 +59,11 @@ const NavBar = (Props: Options) => {
                 </md-item>
                 <md-list-item type="button" id="Onrizon Games" onClick={() => router.push('/onrizongames')} suppressHydrationWarning>
                     <p>Onrizon Games</p>
-                    <OnrizonSVG slot="start" />
+                    <OnrizonSVG />
                 </md-list-item>
                 <md-list-item type="button" id="Wordles" onClick={() => router.push('/wordles')} suppressHydrationWarning>
                     <p>Wordles</p>
-                    <WordlesSVG slot="start" id="wordleIcon" />
+                    <WordlesSVG />
                 </md-list-item>
                 <md-list-item type="button" id="Community Games" onClick={() => router.push('/communitygames')} suppressHydrationWarning>
                     <p>Community Games</p>
