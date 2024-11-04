@@ -32,22 +32,22 @@ const ThemeChanger = (Props: Options) => {
         <div className={Props.IsActive ? "visible" : ""} id="theme-changer">
             <div className="theme-copy">
                 <h2>Theme Controls</h2>
-                <md-list-item type="button" id="themeCopy" onClick={copyColor}>
+                <md-list-item type="button" id="themeCopy" onClick={copyColor} suppressHydrationWarning>
                     <span className="material-symbols-outlined" ref={copyBtnText}>Content_Copy</span>
                 </md-list-item>
             </div>
             <div className="option-cover">
                 <div id="theme-option">
                     <p>Hue</p>
-                    <md-slider id="hue-slider" min="0" max="360" value={Props.Hue} onInput={changeColor}></md-slider>
+                    <md-slider id="hue-slider" min="0" max="360" value={Props.Hue} onInput={changeColor} suppressHydrationWarning></md-slider>
                 </div>
                 <div className="hue" id="hue-display"></div>
             </div>
             <div className="darkMode">
-                <md-outlined-button id="darkmodeon" onClick={darkMode}>
+                <md-outlined-button title="Enable Dark Mode" id="darkmodeon" onClick={darkMode} suppressHydrationWarning>
                     <span className="material-symbols-outlined">Dark_Mode</span>
                 </md-outlined-button>
-                <md-outlined-button id="lightmodeon" onClick={lightMode}>
+                <md-outlined-button title="Enable Light Mode" id="lightmodeon" onClick={lightMode} suppressHydrationWarning>
                     <span className="material-symbols-outlined">Light_Mode</span>
                 </md-outlined-button>
             </div>

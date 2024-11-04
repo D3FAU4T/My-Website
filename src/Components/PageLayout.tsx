@@ -1,16 +1,15 @@
 "use client";
 
-import ThemeChanger from '@/Components/ThemeChanger';
-import { useState, useEffect } from "react";
-import { setColors, setThemeMode } from '@/Shared/functions';
-import dynamic from 'next/dynamic';
-
 import '@material/web/list/list';
 import '@material/web/list/list-item';
 
-import { styles as typescaleStyles } from "@material/web/typography/md-typescale-styles";
+import NavBar from './NavBar';
+import ThemeChanger from '@/Components/ThemeChanger';
 
-const NavBar = dynamic(() => import("@/Components/NavBar"), { ssr: false });
+import { useState, useEffect } from "react";
+import { setColors, setThemeMode } from '@/Shared/functions';
+
+import { styles as typescaleStyles } from "@material/web/typography/md-typescale-styles";
 
 const initialHue = typeof window !== 'undefined' ? parseInt(localStorage.getItem('hueValue') || '289') : 289;
 const initialTheme = typeof window !== 'undefined' ? localStorage.getItem('theme') as 'white' | 'dark' : 'dark';
@@ -36,7 +35,7 @@ const PageLayout = ({ children }: { children: React.ReactNode }) => {
         <>
             <header>
                 <div>
-                    <md-list-item type="button" id="hamBtn" onClick={hamburgerClick}>
+                    <md-list-item type="button" id="hamBtn" onClick={hamburgerClick} suppressHydrationWarning>
                         <span className="material-symbols-outlined">Menu</span>
                     </md-list-item>
                 </div>
@@ -44,7 +43,7 @@ const PageLayout = ({ children }: { children: React.ReactNode }) => {
                 <a className="Webpage-Name" href="/"><b>D3FAU4T's Space</b></a>
 
                 <div>
-                    <md-list-item type="button" id="paletteBtn" onClick={themeChangerClick}>
+                    <md-list-item type="button" id="paletteBtn" onClick={themeChangerClick} suppressHydrationWarning>
                         <span className="material-symbols-outlined">Palette</span>
                     </md-list-item>
                 </div>

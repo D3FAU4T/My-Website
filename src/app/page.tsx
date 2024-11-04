@@ -1,12 +1,10 @@
 "use client";
 
+import PageLayout from "@/Components/PageLayout";
 import Summary from "@/Components/Summary";
-import { Summaries } from "@/Shared/typings";
-import dynamic from "next/dynamic";
+import { SummaryType } from "@/Shared/typings";
 
-const PageLayout = dynamic(() => import('@/Components/PageLayout'), { ssr: false });
-
-const summaries: Summaries[] = [
+const summaries: SummaryType[] = [
     { Name: "Github", Link: "https://github.com/D3FAU4T", IsAnId: false },
     { Name: "Replit", Link: "https://replit.com/@D3FAU4TBOT", IsAnId: false },
 ];
