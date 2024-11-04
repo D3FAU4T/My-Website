@@ -2,6 +2,7 @@ export type SummaryType = {
     Name: string;
     Link: string;
     IsAnId: boolean;
+    SubSummaries?: SummaryType[];
 }
 
 export type NavBarButton = {

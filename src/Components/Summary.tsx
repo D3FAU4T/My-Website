@@ -8,6 +8,24 @@ type Options = {
 }
 
 const Summary = (Props: Options) => {
+    const renderSubSummaries = (subSummaries: SummaryType[]) => {
+        return (
+            <ul style={{ display: "flex", flexDirection: "column", gap: "10px", marginTop: "7px" }}>
+                {
+                    subSummaries.map((SubElem, SubIndex) => (
+                        <li key={`SubSummaryItem-${SubIndex}`}>
+                            <a
+                                href={SubElem.IsAnId ? '#' + SubElem.Link : SubElem.Link}
+                                target={SubElem.IsAnId ? "" : "_blank"}
+                                rel={SubElem.IsAnId ? "" : "noopener"}
+                            >{SubElem.Name}</a>
+                        </li>
+                    ))
+                }
+            </ul>
+        )
+    }
+
     return (
         <aside className="overview" id="overview">
             <p>On this page:</p>
@@ -22,6 +40,9 @@ const Summary = (Props: Options) => {
                                 target={Elem.IsAnId ? "" : "_blank"}
                                 rel={Elem.IsAnId ? "" : "noopener"}
                             >{Elem.Name}</a>
+                            {
+                                Elem.SubSummaries && renderSubSummaries(Elem.SubSummaries)
+                            }
                         </li>
                     ))
                 }
