@@ -1,8 +1,9 @@
-import Summary from "@/Components/Summary";
-import { Summaries } from "@/Shared/typings";
+import Link from "next/link";
 import PageLayout from "@/Components/PageLayout";
+import Summary from "@/Components/Summary";
+import { SummaryType } from "@/Shared/typings";
 
-const summaries: Summaries[] = [
+const summaries: SummaryType[] = [
     { Name: "1st Semester", Link: "1st", IsAnId: true },
     { Name: "2nd Semester", Link: "2nd", IsAnId: true },
     { Name: "3rd Semester", Link: "3rd", IsAnId: true },
@@ -15,8 +16,7 @@ const Syllabus = () => {
             <main>
                 <section className="scrollbar-wrapper" id="section">
                     <h1>Syllabus</h1>
-
-                    <p>This page contains the entire Syllabus for the Sec. B (2023-2027) batch of <a href="https://maps.app.goo.gl/xNeDn9rBmRkqmcJV9" target="_blank" rel="noopener">Techno India Institute of Technology, Sector-V, Salt lake, Webel More</a>
+                    <p>This page contains the entire Syllabus for the Sec. B (2023-2027) batch of <Link href="https://maps.app.goo.gl/xNeDn9rBmRkqmcJV9" target="_blank" rel="noopener">Techno India Institute of Technology, Sector-V, Salt lake, Webel More</Link>
                     </p>
 
                     <h2 id="1st">1st Semester:</h2>
@@ -33,55 +33,55 @@ const Syllabus = () => {
                             <tr>
                                 <td>BCAC101</td>
                                 <td>Digital Electronics</td>
-                                <td><a href="../Syllabus/Sem 1/DE+L.pdf">Download</a></td>
+                                <td><Link href="../Syllabus/Sem 1/DE+L.pdf">Download</Link></td>
                             </tr>
 
                             <tr>
                                 <td>BCAC191</td>
                                 <td>Digital Electronics Lab</td>
-                                <td><a href="../Syllabus/Sem 1/DE+L.pdf">Download</a></td>
+                                <td><Link href="../Syllabus/Sem 1/DE+L.pdf">Download</Link></td>
                             </tr>
 
                             <tr>
                                 <td>BCAC102</td>
                                 <td>Programming for Problem Solving through C</td>
-                                <td><a href="../Syllabus/Sem 1/C+L.pdf">Download</a></td>
+                                <td><Link href="../Syllabus/Sem 1/C+L.pdf">Download</Link></td>
                             </tr>
 
                             <tr>
                                 <td>BCAC192</td>
                                 <td>Programming for Problem Solving Lab</td>
-                                <td><a href="../Syllabus/Sem 1/C+L.pdf">Download</a></td>
+                                <td><Link href="../Syllabus/Sem 1/C+L.pdf">Download</Link></td>
                             </tr>
 
                             <tr>
                                 <td>MIM101</td>
                                 <td>Principles of Management</td>
-                                <td><a href="../Syllabus/Sem 1/Management.pdf">Download</a></td>
+                                <td><Link href="../Syllabus/Sem 1/Management.pdf">Download</Link></td>
                             </tr>
 
                             <tr>
                                 <td>GE2B-06</td>
                                 <td>The Language of Graphic design: Basics and Beyond</td>
-                                <td><a href="../Syllabus/Sem 1/Graphics Design.pdf">Download</a></td>
+                                <td><Link href="../Syllabus/Sem 1/Graphics Design.pdf">Download</Link></td>
                             </tr>
 
                             <tr>
                                 <td>AECC101</td>
                                 <td>English & Professional Communication</td>
-                                <td><a href="../Syllabus/Sem 1/English.pdf">Download</a></td>
+                                <td><Link href="../Syllabus/Sem 1/English.pdf">Download</Link></td>
                             </tr>
 
                             <tr>
                                 <td>SEC181</td>
                                 <td>Life Skills & Personality Development</td>
-                                <td><a href="../Syllabus/Sem 1/Life Skills.pdf">Download</a></td>
+                                <td><Link href="../Syllabus/Sem 1/Life Skills.pdf">Download</Link></td>
                             </tr>
 
                             <tr>
                                 <td>VAC181A</td>
                                 <td>Yoga</td>
-                                <td><a href="../Syllabus/Sem 1/Yoga.pdf">Download</a></td>
+                                <td><Link href="../Syllabus/Sem 1/Yoga.pdf">Download</Link></td>
                             </tr>
                         </tbody>
                     </table>
@@ -103,55 +103,55 @@ const Syllabus = () => {
                             <tr>
                                 <td>BCAC201</td>
                                 <td>Computer Architecture</td>
-                                <td><a href="../Syllabus/Sem 2/CA+L.pdf">Download</a></td>
+                                <td><Link href="../Syllabus/Sem 2/CA+L.pdf">Download</Link></td>
                             </tr>
 
                             <tr>
                                 <td>BCAC291</td>
                                 <td>Computer Architecture Lab</td>
-                                <td><a href="../Syllabus/Sem 2/CA+L.pdf">Download</a></td>
+                                <td><Link href="../Syllabus/Sem 2/CA+L.pdf">Download</Link></td>
                             </tr>
 
                             <tr>
                                 <td>BCAC202</td>
                                 <td>Basics of Web Design Using HTML, CSS, JavaScript</td>
-                                <td><a href="../Syllabus/Sem 2/HTML+L.pdf">Download</a></td>
+                                <td><Link href="../Syllabus/Sem 2/HTML+L.pdf">Download</Link></td>
                             </tr>
 
                             <tr>
                                 <td>BCAC292</td>
                                 <td>Basics of Web Design Using HTML, CSS, JavaScript Lab</td>
-                                <td><a href="../Syllabus/Sem 2/HTML+L.pdf">Download</a></td>
+                                <td><Link href="../Syllabus/Sem 2/HTML+L.pdf">Download</Link></td>
                             </tr>
 
                             <tr>
                                 <td>MIM201A</td>
                                 <td>Organization Behaviour</td>
-                                <td><a href="../Syllabus/Sem 2/OB.pdf">Download</a></td>
+                                <td><Link href="../Syllabus/Sem 2/OB.pdf">Download</Link></td>
                             </tr>
 
                             <tr>
                                 <td>GE3B-02</td>
                                 <td>Basic Mathematics & Statistics</td>
-                                <td><a href="../Syllabus/Sem 2/Math.pdf">Download</a></td>
+                                <td><Link href="../Syllabus/Sem 2/Math.pdf">Download</Link></td>
                             </tr>
 
                             <tr>
                                 <td>AECC201</td>
                                 <td>Modern Indian Languages and Literature</td>
-                                <td><a href="../Syllabus/Sem 1/English.pdf">Download</a></td>
+                                <td><Link href="../Syllabus/Sem 1/English.pdf">Download</Link></td>
                             </tr>
 
                             <tr>
                                 <td>SEC281</td>
                                 <td>IT Skills</td>
-                                <td><a href="../Syllabus/Sem 2/IT Skills.pdf">Download</a></td>
+                                <td><Link href="../Syllabus/Sem 2/IT Skills.pdf">Download</Link></td>
                             </tr>
 
                             <tr>
                                 <td>VAC281D</td>
                                 <td>Environmental Studies</td>
-                                <td><a href="../Syllabus/Sem 2/EVS.pdf">Download</a></td>
+                                <td><Link href="../Syllabus/Sem 2/EVS.pdf">Download</Link></td>
                             </tr>
                         </tbody>
                     </table>
@@ -174,49 +174,50 @@ const Syllabus = () => {
                             <tr>
                                 <td>BCAC301</td>
                                 <td>Python Programming</td>
-                                <td><a href="../Syllabus/Sem 3/Hissss.pdf">Download</a></td>
+                                <td><Link href="../Syllabus/Sem 3/Hissss.pdf">Download</Link></td>
                             </tr>
 
                             <tr>
                                 <td>BCAC391</td>
                                 <td>Python Programming Lab</td>
-                                <td><a href="../Syllabus/Sem 3/Hissss Lab.pdf">Download</a></td>
+                                <td><Link href="../Syllabus/Sem 3/Hissss Lab.pdf">Download</Link></td>
                             </tr>
 
                             <tr>
                                 <td>BCAC302</td>
                                 <td>Data Structure through C</td>
-                                <td><a href="../Syllabus/Sem 3/DSC+L.pdf">Download</a></td>
+                                <td><Link href="../Syllabus/Sem 3/DSC+L.pdf">Download</Link></td>
                             </tr>
 
                             <tr>
                                 <td>BCAC392</td>
                                 <td>Data Structure Lab</td>
-                                <td><a href="../Syllabus/Sem 3/DSC+L.pdf">Download</a></td>
+                                <td><Link href="../Syllabus/Sem 3/DSC+L.pdf">Download</Link></td>
                             </tr>
 
                             <tr>
                                 <td>MIM301A</td>
                                 <td>Principles of Marketing</td>
-                                <td><a href="../Syllabus/Sem 3/Marketing.pdf">Download</a></td>
+                                <td><Link href="../Syllabus/Sem 3/Marketing.pdf">Download</Link></td>
                             </tr>
 
                             <tr>
                                 <td>GE6B-06</td>
                                 <td>Value & Ethics</td>
-                                <td><a href="../Syllabus/Sem 3/Value & Ethics.pdf">Download</a></td>
+                                <td><Link href="../Syllabus/Sem 3/Value & Ethics.pdf">Download</Link></td>
                             </tr>
 
                             <tr>
                                 <td>SEC381</td>
                                 <td>Understanding basics of Cyber Security</td>
-                                <td><a href="../Syllabus/Sem 3/Cyber Security.pdf">Download</a></td>
+                                <td><Link href="../Syllabus/Sem 3/Cyber Security.pdf">Download</Link></td>
                             </tr>
 
                             <tr>
                                 <td>AECC301</td>
                                 <td>The Constitution, Human Rights and Law</td>
-                                <td><a href="../Syllabus/Sem 3/Law.pdf">Download</a></td>
+                                <td><Link href="../Syllabus/Sem 3/Law.pdf">Download</Link></td>
+
                             </tr>
                         </tbody>
                     </table>
@@ -239,25 +240,25 @@ const Syllabus = () => {
                             <tr>
                                 <td>BCAC401</td>
                                 <td>Data Base Management System</td>
-                                <td><a href="../Syllabus/Sem 4/DBMS.pdf">Download</a></td>
+                                <td><Link href="../Syllabus/Sem 4/DBMS.pdf">Download</Link></td>
                             </tr>
 
                             <tr>
                                 <td>BCAC491</td>
                                 <td>DBMS Lab</td>
-                                <td><a href="../Syllabus/Sem 4/DBMS Lab.pdf">Download</a></td>
+                                <td><Link href="../Syllabus/Sem 4/DBMS Lab.pdf">Download</Link></td>
                             </tr>
 
                             <tr>
                                 <td>BCAC402</td>
                                 <td>Operating System</td>
-                                <td><a href="../Syllabus/Sem 4/OS.pdf">Download</a></td>
+                                <td><Link href="../Syllabus/Sem 4/OS.pdf">Download</Link></td>
                             </tr>
 
                             <tr>
                                 <td>BCAC403</td>
                                 <td>Software Engineering</td>
-                                <td><a href="../Syllabus/Sem 4/Software Engineering.pdf">Download</a></td>
+                                <td><Link href="../Syllabus/Sem 4/Software Engineering.pdf">Download</Link></td>
                             </tr>
                         </tbody>
                     </table>
