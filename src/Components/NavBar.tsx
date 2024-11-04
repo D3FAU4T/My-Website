@@ -65,7 +65,7 @@ const NavBar = (Props: Options) => {
                     <p>Wordles</p>
                     <WordlesSVG slot="start" id="wordleIcon" />
                 </md-list-item>
-                <md-list-item type="button" id="Community Games" suppressHydrationWarning>
+                <md-list-item type="button" id="Community Games" onClick={() => router.push('/communitygames')} suppressHydrationWarning>
                     <p>Community Games</p>
                     <span slot="start" className="material-symbols-outlined">games</span>
                 </md-list-item>
