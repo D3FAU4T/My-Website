@@ -1,4 +1,4 @@
-export type Summaries = {
+export type SummaryType = {
     Name: string;
     Link: string;
     IsAnId: boolean;

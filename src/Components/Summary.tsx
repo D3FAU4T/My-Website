@@ -1,8 +1,10 @@
-import { Summaries } from "../Shared/typings";
+import { CSSProperties } from "react";
+import { SummaryType } from "../Shared/typings";
 
 type Options = {
     PageName: string;
-    Elements: Summaries[];
+    Elements: SummaryType[];
+    style?: CSSProperties;
 }
 
 const Summary = (Props: Options) => {
@@ -11,7 +13,7 @@ const Summary = (Props: Options) => {
             <p>On this page:</p>
             <h2>{Props.PageName}</h2>
 
-            <ul style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+            <ul style={Props.style ?? { display: "flex", flexDirection: "column", gap: "10px" }}>
                 {
                     Props.Elements.map((Elem, Index) => (
                         <li key={`SummaryItem-${Index}`}>
