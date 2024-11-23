@@ -1,0 +1,201 @@
+{
+    "word": [
+        {
+            "Name": "Bombparty",
+            "ID": "jklm",
+            "Image": "/Assets/BombParty.jpeg",
+            "Link": "https://jklm.fun/",
+            "Description": "Type a word that contains the prompt. Be quick! If the bomb explodes during your turn, you lose a life. The last player standing wins the game."
+        },
+        {
+            "Name": "Semantle",
+            "ID": "semantle",
+            "Image": "/Assets/Semantle.jpeg",
+            "Link": "https://semantle.com/",
+            "Description": "Semantle is a word-guessing game where you try to find a hidden word based on semantic similarity. Unlike traditional word games, it uses a neural network to gauge how close your guesses are to the target word. The game challenges your vocabulary and lateral thinking skills."
+        },
+        {
+            "Name": "Waffle",
+            "ID": "waffle",
+            "Image": "/Assets/Waffle.jpeg",
+            "Link": "https://wafflegame.net/",
+            "Description": "Rearrange letters in a grid to form valid words horizontally and vertically. Each swap counts as a move, and you have a limited number to solve the puzzle. It's like Wordle, but with more twists and turns!"
+        },
+        {
+            "Name": "Weaver",
+            "ID": "weaver",
+            "Image": "/Assets/Weaver.jpeg",
+            "Link": "https://wordwormdormdork.com/",
+            "Description": "Transform one word into another by changing one letter at a time. Each step must form a valid word, challenging your vocabulary and strategic thinking. It's a classic word ladder game brought to digital life."
+        },
+        {
+            "Name": "Redactle",
+            "ID": "redactle",
+            "Image": "/Assets/Redactle.jpeg",
+            "Link": "https://redactle.anybrowser.org/",
+            "Description": "Guess the hidden words in a redacted Wikipedia article. Use your knowledge and inference skills to uncover the document bit by bit. It's a mix of trivia, strategy, and a whole lot of guessing!"
+        },
+        {
+            "Name": "Phrasle",
+            "ID": "phrasle",
+            "Image": "/Assets/Phrasle.jpeg",
+            "Link": "https://phrasle.com/",
+            "Description": "Guess the phrase with the help of given letters, similar to Hangman but with entire phrases. It tests your ability to recognize common sayings and idioms with limited clues. Perfect for phrase-solving enthusiasts!"
+        },
+        {
+            "Name": "Squaredle",
+            "ID": "squaredle",
+            "Image": "/Assets/Squaredle.jpeg",
+            "Link": "https://squaredle.app/",
+            "Description": "Find as many words as possible in a grid of letters by connecting adjacent tiles. Longer words and rare letters score higher points, challenging both your vocabulary and pattern recognition. It's a word search with a twist!"
+        },
+        {
+            "Name": "Pimantle",
+            "ID": "pimantle",
+            "Image": "/Assets/Pimantle.jpeg",
+            "Link": "https://semantle.pimanrul.es/",
+            "Description": "Guess a secret word based on how semantically similar your guesses are to it. The game provides feedback on how \"hot\" or \"cold\" your guesses are, helping you inch closer to the target. It's a mind-bending word game that tests your language intuition."
+        },
+        {
+            "Name": "Connections",
+            "ID": "connections",
+            "Image": "/Assets/Connections.jpeg",
+            "Link": "https://www.nytimes.com/games/connections",
+            "Description": "Identify groups of related words from a list and categorize them correctly. It's a game of finding hidden connections and patterns, challenging your lateral thinking and vocabulary. Think of it as a fun brain-teasing puzzle from The New York Times!"
+        }
+    ],
+    "geography": [
+        {
+            "Name": "Geoguessr",
+            "ID": "geoguessr",
+            "Image": "/Assets/Geoguessr.jpeg",
+            "Link": "https://www.geoguessr.com/",
+            "Description": "Explore the world using Google Street View and guess the location based on the surroundings. It's a thrilling journey of geography and deduction!"
+        },
+        {
+            "Name": "Flaggle",
+            "ID": "flaggle",
+            "Image": "/Assets/Flaggle.jpeg",
+            "Link": "https://www.flaggle.net/",
+            "Description": "Test your knowledge of flags from around the world in a fun and challenging visual game. See how you can identify!"
+        },
+        {
+            "Name": "Globle",
+            "ID": "globle",
+            "Image": "/Assets/Globle.jpeg",
+            "Link": "https://globle-game.com/",
+            "Description": "Embark on a global adventure to guess which country it is using the fewest number of guesses. Everyday, there's a new country!"
+        },
+        {
+            "Name": "Worldle",
+            "ID": "worldle",
+            "Image": "/Assets/Worldle.jpeg",
+            "Link": "https://worldle.teuteuf.fr/",
+            "Description": "Guess the country based on its shape on a world map and given clues. Sharpen your geography skills and challenge yourself to guess quickly and accurately!"
+        },
+        {
+            "Name": "Countryle",
+            "ID": "countryle",
+            "Image": "/Assets/Countryle.jpeg",
+            "Link": "https://www.countryle.com/",
+            "Description": "Guess the country based on clues such as latitude, longitude, directions and continent. It's a fun and educational game to test your knowledge of countries around the world!"
+        },
+        {
+            "Name": "Tradle",
+            "ID": "tradle",
+            "Image": "/Assets/Tradle.jpeg",
+            "Link": "https://tradle.net/",
+            "Description": "Explore the world of trade interactively, enhancing your understanding without extensive research. Guess which country exports the given goods in 6 guesses"
+        }
+    ],
+    "math": [
+        {
+            "Name": "Numble",
+            "Description": "Solve challenging number puzzles by arranging digits to match target values. It's a fun test of your mathematical skills and logical thinking!",
+            "Image": "/Assets/Numble.jpeg",
+            "Link": "https://numble.wtf/",
+            "ID": "numble"
+        },
+        {
+            "Name": "Numberle",
+            "Description": "Guess the hidden numerical equation in a limited number of tries. Use logical deduction and mathematical operations to crack the code!",
+            "Image": "/Assets/Numberle.jpeg",
+            "Link": "https://numberle.org/",
+            "ID": "numberle"
+        },
+        {
+            "Name": "Nerdle",
+            "Description": "Uncover the hidden equation by guessing numbers and operations. This daily math puzzle challenges your numerical prowess and problem-solving skills!",
+            "Image": "/Assets/Nerdle.jpeg",
+            "Link": "https://nerdlegame.com/",
+            "ID": "nerdle"
+        },
+        {
+            "Name": "Mather",
+            "Description": "Find the correct equation that matches the given result using a set of numbers and operators. It’s a fast-paced math puzzle for quick thinkers!",
+            "Image": "/Assets/Mather.jpeg",
+            "Link": "https://www.mathler.com/",
+            "ID": "mather"
+        }
+    ],
+    "quiz": [
+        {
+            "Name": "Jetpunk",
+            "Description": "Test your knowledge with thousands of quizzes on various topics. From geography to pop culture, see how many you can ace!",
+            "Image": "/Assets/Jetpunk.jpeg",
+            "Link": "https://www.jetpunk.com/",
+            "ID": "jetpunk"
+        },
+        {
+            "Name": "Planet Crosswords",
+            "Description": "Solve crosswords made by Hovercats, challenging your knowledge. It's a planetary twist on the classic crossword puzzle!",
+            "Image": "/Assets/Planet Crosswords.jpeg",
+            "Link": "https://hovercats.gg/",
+            "ID": "planetcrosswords"
+        }
+    ],
+    "medias": [
+        {
+            "Name": "Actorle",
+            "Description": "Guess the actor based on their movies and age. Test your filmography knowledge and see how many actors you can identify!",
+            "Image": "/Assets/Actorle.jpeg",
+            "Link": "https://actorle.com/",
+            "ID": "actorle"
+        },
+        {
+            "Name": "Lyricle",
+            "Description": "Identify the song based on a snippet of its lyrics. Perfect for music lovers, it’s a fun way to test your lyrical knowledge!",
+            "Image": "/Assets/Lyricle.jpeg",
+            "Link": "https://www.lyricle.app/",
+            "ID": "lyricle"
+        },
+        {
+            "Name": "Musicle",
+            "Description": "Guess the song from a short audio clip. Challenge your musical ear and see how quickly you can name that tune!",
+            "Image": "/Assets/Musicle.jpeg",
+            "Link": "https://musicle.app/",
+            "ID": "musicle"
+        },
+        {
+            "Name": "Moviedle",
+            "Description": "Guess the movie from a fast-paced compilation of scenes. Test your film knowledge and quick thinking with this exciting movie quiz!",
+            "Image": "/Assets/Moviedle.jpeg",
+            "Link": "https://likewisetv.com/arcade/moviedle",
+            "ID": "moviedle"
+        },
+        {
+            "Name": "Framed",
+            "Description": "Identify the movie based on a single frame. It's a challenging game for cinephiles who can recognize films from just one shot!",
+            "Image": "/Assets/Framed.jpeg",
+            "Link": "https://framed.wtf/",
+            "ID": "framed"
+        },
+        {
+            "Name": "Chronophoto",
+            "Description": "Guess the year a photo was taken by analyzing visual clues. Sharpen your historical and observational skills in this unique guessing game!",
+            "Image": "/Assets/Chronophoto.jpeg",
+            "Link": "https://www.chronophoto.app/",
+            "ID": "chronophoto"
+        }
+    ]
+}
