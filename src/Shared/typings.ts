@@ -34,4 +34,5 @@ export interface AssignmentOptions {
     Description: JSX.Element[];
     DueDate: string;
     Status: "Pending" | "Turned-in" | "Done";
+    Redirect: string;
 }
