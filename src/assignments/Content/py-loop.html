@@ -1,0 +1,340 @@
+<h1>Python Assignment</h1>
+<h3 id="objective">Objective:</h3>
+<p>Solve the following questions and upload in google classroom</p>
+
+<h2>Deadline: 11th September 2024</h2>
+
+<div class="status">
+    <h3>Status: </h3>
+    <div class="flag">
+        <p>Turned-in</p>
+        <span class="material-symbols-outlined">done_all</span>
+    </div>
+</div>
+
+<h3>Questions:</h3>
+
+<div class="question">
+    <h2 id="q1">1. Discuss the concept of loops in Python. What are the types of loops supported in
+        Python, and when would you use each type? Provide examples to illustrate.</h2>
+
+    <p>In Python, loops are used to execute a block of code repeatedly until a certain condition is met.
+        Python mainly supports two main types of loops: <span class="block">for</span> loop and <span
+            class="block">while</span> loop, each having it's own use case.
+    </p>
+    <br>
+    <h3>For loop:</h3>
+    <p>The <span class="block">for</span> loop in python is used to iterate over a sequence (List, Tuple, Dictionary,
+        Set, String).
+        This loop is useful if you know the number of iterations beforehand.</p>
+    <h3>Example:</h3>
+    <div class="codeName">
+        <p>Python</p>
+    </div>
+    <pre><code>
+vowels = [ 'a', 'e'. 'i', 'o', 'u' ]
+for char in vowels:
+    print(char)</code></pre>
+</div>
+
+<div class="answer">
+    <div class="codeName">
+        <p>Output</p>
+    </div>
+    <pre><code class="language-yaml">
+a
+e
+i
+o
+u</code></pre>
+</div>
+
+<h3>While loop:</h3>
+<p>The <span class="block">while</span> loop in python is used to execute a block of code as long as a condition is
+    true. This loop is useful when the number of iterations is not known beforehand and depends on some condition.</p>
+<h3>Example:</h3>
+<div class="codeName">
+    <p>Python</p>
+</div>
+<pre><code>
+user_num = int(input("? Enter an integer\n> "))
+index = 1
+while index <= user_num:
+    print(index)
+    index += 1</code></pre>
+
+<br><br>
+<div class="codeName">
+    <p>Output</p>
+</div>
+<pre><code class="language-yaml">
+? Enter an integer
+> 5
+1
+2
+3
+4
+5</code></pre>
+
+<br><br>
+
+<div class="question">
+    <h2 id="q2">2. Explain the <span class="block">for</span> loop in Python. How does it differ from the <span class="block">while</span> loop, and what
+        are the advantages of using a <span class="block">for</span> loop over a <span class="block">while</span> loop?</h2>
+
+    <p>The <span class="block">for</span> loop in python is used to iterate over a sequence (List, Tuple, Dictionary, Set or String) or any other iterable object.
+        During each iteration, an item from the sequence is assigned to a variable, and the block of code inside the loop is executed.
+    </p>
+
+    <h3>Example:</h3>
+    <div class="codeName">
+        <p>Python</p>
+    </div>
+    <pre><code>
+fruits = [ "apple", "banana", "cherry" ]
+for fruit in fruits:
+    print(fruit)</code></pre>
+
+    <br><br>
+    <div class="codeName">
+        <p>Output</p>
+    </div>
+    <pre><code class="language-yaml">
+apple
+banana
+cherry</code></pre>
+<br><br>
+    <h3>Difference between <span class="block">for</span> loop and <span class="block">while</span> loop:</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th class="hide-mobile">Aspect</th>
+                <th>For loop</th>
+                <th>While loop</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="hide-mobile">Iteration Control</td>
+                <td>Iterates over a sequence of elements</td>
+                <td>Repeats as long as condition is true</td>
+            </tr>
+            <tr>
+                <td class="hide-mobile">Use cases</td>
+                <td>Ideal for iterating over a collection. (List, Tuple, Dict, etc)</td>
+                <td>Suitable for scenarios where the loop should continue until condition is met</td>
+            </tr>
+            <tr>
+                <td class="hide-mobile">Initialisation and Condition</td>
+                <td>Initialisation and iteration are automatically handled by the loop</td>
+                <td>Requires explicit initialisation and condition checking</td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br>
+    <h3>Advantages of <span class="block">for</span> loop over <span class="block">while</span> loop:</h3>
+    <ul class="spaced-li">
+        <li><strong>Simplicity:</strong> <span class="block">for</span> loops are generally and more readable when iterating over a sequence.</li>
+        <li><strong>Less error-prone:</strong> Since the iteration is handled automatically, there is less chance of creating infinite loop or off-by-one error which are more common with <span class="block">while</span> loops</li>
+        <li><strong>Conciseness:</strong> <span class="block">for</span> loop often result in concise code, especially when working with sequence.</li>
+    </ul>
+</div>
+
+<div class="question">
+    <h2 id="q3">3. Describe the process of iterating over a sequence using a <span class="block">for</span> loop in Python. Discuss
+        different sequence types that can be iterated over using a <span class="block">for</span> loop.</h2>
+</div>
+
+<div class="answer">
+    <p>In Python, a <span class="block">for</span> loop is used to iterate over a sequence of elements. This sequence can be a list, tuple, dictionary, set or string. The <span class="block">for</span> loop assigns each element in the sequence to a variable and executes a block of code for each element.</p>
+    <h3>Syntax:</h3>
+    <div class="codeName">Python</div>
+    <pre><code class="language-py">
+for <i>variable</i> in <i>sequence</i>:
+    # Code to execute for each item</code></pre>
+
+    <br>
+    <h3>Different Sequence Types:</h3>
+    <ol class="spaced-li">
+        <li>
+            <p><strong>List:</strong> A list is an ordered mutable collection of items that can be of any type</p>
+            <h4>Example:</h4>
+            <div class="codeName">Python</div>
+            <pre><code>
+fruits = [ "apple", "banana", "cherry" ]
+for fruit in fruits:
+    print(fruit)
+            </code></pre>
+            <br><br>
+            <div class="codeName">Output</div>
+            <pre><code class="language-yaml">
+apple
+banana
+cherry</code></pre>
+        </li>
+
+        <li>
+            <p><strong>Tuple:</strong> A tuple is similar to a list but it is immutable, meaning it's elements can't be changed after creation.</p>
+            <h4>Example:</h4>
+            <div class="codeName">Python</div>
+            <pre><code>
+numbers = ( 1, 2, 3 )
+for num in numbers:
+    print(num)</code></pre>
+            <br><br>
+            <div class="codeName">Output</div>
+            <pre><code class="language-yaml">
+1
+2
+3</code></pre>
+        </li>
+
+        <li>
+            <p><strong>Dictionary:</strong> A dictionary is an unordered collection of key-value pairs. Both keys and values are iterable.</p>
+            <h4>Example:</h4>
+            <div class="codeName">Python</div>
+            <pre><code class="language-py">
+student_scores = {
+    "Generic Name 1": 85,
+    "Generic Name 2": 30,
+    "Generic Name 3": 78
+}
+
+for key, value in student_scores.items():
+    print(f"{key} got {value} points")</code></pre>
+            <br><br>
+            <div class="codeName">Output</div>
+            <pre><code class="language-yaml">
+Generic Name 1 got 85 points
+Generic Name 2 got 30 points
+Generic Name 3 got 78 points</code></pre>
+        </li>
+
+        <li>
+            <p><strong>Set:</strong> A set is an unordered collection of unique items. Sets are mutable but it doesn't support indexing.</p>
+            <h4>Example:</h4>
+            <div class="codeName">Python</div>
+            <pre><code class="language-py">
+unique_numbers = { 1, 2, 3, 4 }
+for num in unique_numbers:
+    print(num)</code></pre>
+            <br><br>
+            <div class="codeName">Output</div>
+            <pre><code class="language-yaml">
+1
+2
+3
+4</code></pre>
+        </li>
+
+        <li>
+            <p><strong>String:</strong> A string is an iterable sequence of characters</p>
+            <h4>Example:</h4>
+            <div class="codeName">Python</div>
+            <pre><code class="language-py">
+message = "Hello"
+for char in message:
+    print(char)</code></pre>
+            <br><br>
+            <div class="codeName">Output</div>
+            <pre><code class="language-yaml">
+H
+e
+l
+l
+o</code></pre>
+        </li>
+    </ol>
+</div>
+
+<div class="question">
+    <h2 id="q4">4. Explain the <span class="block">range()</span> function in Python. How is it used to generate sequences of
+        numbers, and how can it be combined with a <span class="block">for</span> loop? Provide examples.</h2>
+</div>
+
+<div class="answer">
+    <p>The <span class="block">range()</span> function in Python is used to generate a sequence of numbers. It can take one, two or three arguments</p>
+    <ul class="spaced-li">
+        <li>
+            <p><strong>range(stop)</strong>: Generates a number from 0 upto, but not including <span class="block">stop</span></p>
+            <h4>Example:</h4>
+            <div class="codeName">Python</div>
+            <pre><code class="language-py">
+for index in range(5):
+    print(index)</code></pre>
+            <br><br>
+            <div class="codeName">Output</div>
+            <pre><code class="language-yaml">
+0
+1
+2
+3
+4</code></pre>
+<br>
+        </li>
+
+        <li>
+            <p><strong>range(start, stop)</strong>: Generates number from <span class="block">start</span> upto but not including <span class="block">stop</span></p>
+            <h4>Example:</h4>
+            <div class="codeName">Python</div>
+            <pre><code class="language-py">
+for index in range(2, 5):
+    print(index)</code></pre>
+            <br><br>
+            <div class="codeName">Output</div>
+            <pre><code class="language-yaml">
+2
+3
+4</code></pre>
+<br>
+        </li>
+
+        <li>
+            <p><strong>range(start, stop, step)</strong>: Generates number from <span class="block">start</span> upto but not including <span class="block">stop</span> incrementing by <span class="block">step</span></p>
+            <h4>Example:</h4>
+            <div class="codeName">Python</div>
+            <pre><code class="language-py">
+for index in range(2, 10, 3):
+    print(index)</code></pre>
+            <br><br>
+            <div class="codeName">Output</div>
+            <pre><code class="language-yaml">
+2
+5
+8</code></pre>
+<br>
+        </li>
+    </ul>
+</div>
+
+<div class="question">
+    <h2 id="q5">5. Discuss the concept of nested loops in Python. Provide examples demonstrating how
+        to use nested loops to iterate over multi-dimensional data structures.</h2>
+</div>
+
+<div class="answer">
+    <p>A nested loop in Python is a loop inside another loop. The "inner loop" will be executed completely for each iteration of the "outer loop".
+        Nested loops are particularly useful when working with multi-dimensional data structures i.e. list of lists.</p>
+    
+    <h3>Example:</h3>
+    <div class="codeName">Python</div>
+    <pre><code class="language-py">
+matrix = [
+    [ 1, 2, 3 ],
+    [ 4, 5, 6 ],
+    [ 7, 8, 9 ],
+]
+
+for row in matrix:
+    for elem in row:
+        print(elem, end='\t')
+    print() # New Line</code></pre>
+    <br><br>
+
+    <div class="codeName">Output</div>
+    <pre><code class="language-yaml">
+1   2   3
+4   5   6
+7   8   9</code></pre>
+</div>
