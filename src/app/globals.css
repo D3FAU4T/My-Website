@@ -564,9 +564,25 @@ pre {
   background-color: var(--hover-color);
 }
 
+.block {
+  background-color: var(--md-sys-color-text);
+  color: var(--md-sys-color-background);
+  padding: 0.5px 3px;
+  border-radius: 5px;
+  font-weight: 900;
+}
+
+.spaced-li > li {
+  margin-top: 10px;
+}
+
 @media (max-width: 900px) {
   .navbar {
     width: 0px;
+  }
+
+  .hide-mobile {
+    display: none;
   }
 
   header {
