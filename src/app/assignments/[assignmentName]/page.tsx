@@ -1,11 +1,26 @@
 import PageLayout from "@/Components/PageLayout";
 import { readFileSync } from "fs";
 import path from "path";
+import * as cheerio from 'cheerio';
+import React from "react";
 
-const AssignmentContent = async ({ params }: { params: Promise<{ assignmentName: string; }> } ) => {
+const AssignmentContent = async ({ params }: { params: Promise<{ assignmentName: string; }> }) => {
     const { assignmentName } = await params;
-    const data = readFileSync(path.join(process.cwd(), "src", "assignments", "Content", assignmentName + '.html'), 'utf-8');
-    const context = readFileSync(path.join(process.cwd(), "src", "assignments", "Context", assignmentName + '.html'), 'utf-8');
+    const data = readFileSync(path.join(process.cwd(), "public", "Assignments", assignmentName + '.html'), 'utf-8');
+    const $ = cheerio.load(data);
+    
+    const pageTitle = $('.page-title').text();
+    const summary: JSX.Element[] = [];
+
+    $('.summary').each((i, el) => {
+        const data = $(el);
+        const id = data.attr('id');
+        const summaryText = data.attr('data-summary');
+        if (id && summaryText)
+            summary.push(
+                <li key={"summary-" + id}><a href={'#' + id}>{summaryText}</a></li>
+            );
+    });
 
     return (
         <PageLayout>
@@ -13,7 +28,10 @@ const AssignmentContent = async ({ params }: { params: Promise<{ assignmentName:
                 <section className="scrollbar-wrapper" id="section" dangerouslySetInnerHTML={{ __html: data }} suppressHydrationWarning>
                 </section>
             </main>
-            <aside className="overview" id="overview" dangerouslySetInnerHTML={{ __html: context }}>
+            <aside className="overview" id="overview">
+                <p>On this page:</p>
+                <h2>{pageTitle}</h2>
+                <ul style={{ display: "flex", flexDirection: "column", gap: "10px" }}>{summary}</ul>
             </aside>
         </PageLayout>
     );
