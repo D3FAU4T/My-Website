@@ -38,10 +38,9 @@ export default function RootLayout({
       </head>
       <body className={`${googleSans.className} ${roboto.className}`}>
           {children}
-          <Script id="highlight-init" strategy="afterInteractive">
+          <Script strategy="afterInteractive">
           {
-            `hljs.highlightAll();
-            function copyContent(id) {
+            `function copyContent(id) {
               const icon = document.getElementById(\`\${id}i\`);
               icon.textContent = "check";
               navigator.clipboard.writeText(document.getElementById(\`\${id}code\`).textContent);

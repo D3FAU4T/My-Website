@@ -3,6 +3,7 @@ import { readFileSync } from "fs";
 import path from "path";
 import * as cheerio from 'cheerio';
 import React from "react";
+import Script from "next/script";
 
 const AssignmentContent = async ({ params }: { params: Promise<{ assignmentName: string; }> }) => {
     const { assignmentName } = await params;
@@ -27,6 +28,7 @@ const AssignmentContent = async ({ params }: { params: Promise<{ assignmentName:
             <main>
                 <section className="scrollbar-wrapper" id="section" dangerouslySetInnerHTML={{ __html: data }} suppressHydrationWarning>
                 </section>
+                <Script>{`hljs.highlightAll();`}</Script>
             </main>
             <aside className="overview" id="overview">
                 <p>On this page:</p>
