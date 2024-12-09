@@ -15,7 +15,8 @@
 <h3>Questions:</h3>
 
 <div class="question">
-    <h2 class="summary" data-summary="Loop concept and it's types" id="q1">1. Discuss the concept of loops in Python. What are the types of loops supported in
+    <h2 class="summary" data-summary="Loop concept and it's types" id="q1">1. Discuss the concept of loops in Python.
+        What are the types of loops supported in
         Python, and when would you use each type? Provide examples to illustrate.</h2>
 
     <p>In Python, loops are used to execute a block of code repeatedly until a certain condition is met.
@@ -79,11 +80,15 @@ while index <= user_num:
 <br><br>
 
 <div class="question">
-    <h2 class="summary" data-summary="For loop vs While loop" id="q2">2. Explain the <span class="block">for</span> loop in Python. How does it differ from the <span class="block">while</span> loop, and what
-        are the advantages of using a <span class="block">for</span> loop over a <span class="block">while</span> loop?</h2>
+    <h2 class="summary" data-summary="For loop vs While loop" id="q2">2. Explain the <span class="block">for</span> loop
+        in Python. How does it differ from the <span class="block">while</span> loop, and what
+        are the advantages of using a <span class="block">for</span> loop over a <span class="block">while</span> loop?
+    </h2>
 
-    <p>The <span class="block">for</span> loop in python is used to iterate over a sequence (List, Tuple, Dictionary, Set or String) or any other iterable object.
-        During each iteration, an item from the sequence is assigned to a variable, and the block of code inside the loop is executed.
+    <p>The <span class="block">for</span> loop in python is used to iterate over a sequence (List, Tuple, Dictionary,
+        Set or String) or any other iterable object.
+        During each iteration, an item from the sequence is assigned to a variable, and the block of code inside the
+        loop is executed.
     </p>
 
     <h3>Example:</h3>
@@ -103,7 +108,7 @@ for fruit in fruits:
 apple
 banana
 cherry</code></pre>
-<br><br>
+    <br><br>
     <h3>Difference between <span class="block">for</span> loop and <span class="block">while</span> loop:</h3>
 
     <table>
@@ -135,19 +140,26 @@ cherry</code></pre>
     <br><br>
     <h3>Advantages of <span class="block">for</span> loop over <span class="block">while</span> loop:</h3>
     <ul class="spaced-li">
-        <li><strong>Simplicity:</strong> <span class="block">for</span> loops are generally and more readable when iterating over a sequence.</li>
-        <li><strong>Less error-prone:</strong> Since the iteration is handled automatically, there is less chance of creating infinite loop or off-by-one error which are more common with <span class="block">while</span> loops</li>
-        <li><strong>Conciseness:</strong> <span class="block">for</span> loop often result in concise code, especially when working with sequence.</li>
+        <li><strong>Simplicity:</strong> <span class="block">for</span> loops are generally and more readable when
+            iterating over a sequence.</li>
+        <li><strong>Less error-prone:</strong> Since the iteration is handled automatically, there is less chance of
+            creating infinite loop or off-by-one error which are more common with <span class="block">while</span> loops
+        </li>
+        <li><strong>Conciseness:</strong> <span class="block">for</span> loop often result in concise code, especially
+            when working with sequence.</li>
     </ul>
 </div>
 
 <div class="question">
-    <h2 class="summary" data-summary="For loop process and sequence types" id="q3">3. Describe the process of iterating over a sequence using a <span class="block">for</span> loop in Python. Discuss
+    <h2 class="summary" data-summary="For loop process and sequence types" id="q3">3. Describe the process of iterating
+        over a sequence using a <span class="block">for</span> loop in Python. Discuss
         different sequence types that can be iterated over using a <span class="block">for</span> loop.</h2>
 </div>
 
 <div class="answer">
-    <p>In Python, a <span class="block">for</span> loop is used to iterate over a sequence of elements. This sequence can be a list, tuple, dictionary, set or string. The <span class="block">for</span> loop assigns each element in the sequence to a variable and executes a block of code for each element.</p>
+    <p>In Python, a <span class="block">for</span> loop is used to iterate over a sequence of elements. This sequence
+        can be a list, tuple, dictionary, set or string. The <span class="block">for</span> loop assigns each element in
+        the sequence to a variable and executes a block of code for each element.</p>
     <h3>Syntax:</h3>
     <div class="codeName">Python</div>
     <pre><code class="language-py">
@@ -175,7 +187,8 @@ cherry</code></pre>
         </li>
 
         <li>
-            <p><strong>Tuple:</strong> A tuple is similar to a list but it is immutable, meaning it's elements can't be changed after creation.</p>
+            <p><strong>Tuple:</strong> A tuple is similar to a list but it is immutable, meaning it's elements can't be
+                changed after creation.</p>
             <h4>Example:</h4>
             <div class="codeName">Python</div>
             <pre><code>
@@ -191,7 +204,8 @@ for num in numbers:
         </li>
 
         <li>
-            <p><strong>Dictionary:</strong> A dictionary is an unordered collection of key-value pairs. Both keys and values are iterable.</p>
+            <p><strong>Dictionary:</strong> A dictionary is an unordered collection of key-value pairs. Both keys and
+                values are iterable.</p>
             <h4>Example:</h4>
             <div class="codeName">Python</div>
             <pre><code class="language-py">
@@ -212,7 +226,8 @@ Generic Name 3 got 78 points</code></pre>
         </li>
 
         <li>
-            <p><strong>Set:</strong> A set is an unordered collection of unique items. Sets are mutable but it doesn't support indexing.</p>
+            <p><strong>Set:</strong> A set is an unordered collection of unique items. Sets are mutable but it doesn't
+                support indexing.</p>
             <h4>Example:</h4>
             <div class="codeName">Python</div>
             <pre><code class="language-py">
@@ -249,15 +264,18 @@ o</code></pre>
 </div>
 
 <div class="question">
-    <h2 class="summary" data-summary="Range Function" id="q4">4. Explain the <span class="block">range()</span> function in Python. How is it used to generate sequences of
+    <h2 class="summary" data-summary="Range Function" id="q4">4. Explain the <span class="block">range()</span> function
+        in Python. How is it used to generate sequences of
         numbers, and how can it be combined with a <span class="block">for</span> loop? Provide examples.</h2>
 </div>
 
 <div class="answer">
-    <p>The <span class="block">range()</span> function in Python is used to generate a sequence of numbers. It can take one, two or three arguments</p>
+    <p>The <span class="block">range()</span> function in Python is used to generate a sequence of numbers. It can take
+        one, two or three arguments</p>
     <ul class="spaced-li">
         <li>
-            <p><strong>range(stop)</strong>: Generates a number from 0 upto, but not including <span class="block">stop</span></p>
+            <p><strong>range(stop)</strong>: Generates a number from 0 upto, but not including <span
+                    class="block">stop</span></p>
             <h4>Example:</h4>
             <div class="codeName">Python</div>
             <pre><code class="language-py">
@@ -271,11 +289,12 @@ for index in range(5):
 2
 3
 4</code></pre>
-<br>
+            <br>
         </li>
 
         <li>
-            <p><strong>range(start, stop)</strong>: Generates number from <span class="block">start</span> upto but not including <span class="block">stop</span></p>
+            <p><strong>range(start, stop)</strong>: Generates number from <span class="block">start</span> upto but not
+                including <span class="block">stop</span></p>
             <h4>Example:</h4>
             <div class="codeName">Python</div>
             <pre><code class="language-py">
@@ -287,11 +306,12 @@ for index in range(2, 5):
 2
 3
 4</code></pre>
-<br>
+            <br>
         </li>
 
         <li>
-            <p><strong>range(start, stop, step)</strong>: Generates number from <span class="block">start</span> upto but not including <span class="block">stop</span> incrementing by <span class="block">step</span></p>
+            <p><strong>range(start, stop, step)</strong>: Generates number from <span class="block">start</span> upto
+                but not including <span class="block">stop</span> incrementing by <span class="block">step</span></p>
             <h4>Example:</h4>
             <div class="codeName">Python</div>
             <pre><code class="language-py">
@@ -303,20 +323,22 @@ for index in range(2, 10, 3):
 2
 5
 8</code></pre>
-<br>
+            <br>
         </li>
     </ul>
 </div>
 
 <div class="question">
-    <h2 class="summary" data-summary="Nested Loop" id="q5">5. Discuss the concept of nested loops in Python. Provide examples demonstrating how
+    <h2 class="summary" data-summary="Nested Loop" id="q5">5. Discuss the concept of nested loops in Python. Provide
+        examples demonstrating how
         to use nested loops to iterate over multi-dimensional data structures.</h2>
 </div>
 
 <div class="answer">
-    <p>A nested loop in Python is a loop inside another loop. The "inner loop" will be executed completely for each iteration of the "outer loop".
+    <p>A nested loop in Python is a loop inside another loop. The "inner loop" will be executed completely for each
+        iteration of the "outer loop".
         Nested loops are particularly useful when working with multi-dimensional data structures i.e. list of lists.</p>
-    
+
     <h3>Example:</h3>
     <div class="codeName">Python</div>
     <pre><code class="language-py">
@@ -337,4 +359,148 @@ for row in matrix:
 1   2   3
 4   5   6
 7   8   9</code></pre>
+</div>
+
+<div class="question">
+    <h2 class="summary" data-summary="List concept and characteristics" id="q6">6. Explain the concept of lists in
+        python. How are lists defined and what are their key characteristics? Provide example to illustrate.</h2>
+</div>
+
+<div class="answer">
+    <p>A list in Python is a collection of items that are ordered and mutable. Lists are one of the most versatile data
+        types in python allowing you to store a sequence of items in a single variable. They are defined using square
+        brackets <span class="block">[ ]</span> or by using <span class="block">list()</span> class.</p>
+
+    <h3>Characteristics of list:</h3>
+    <ul>
+        <li><strong>Ordered</strong>: Lists maintain the order of elements. When you add elements, they are stored in a
+            specific order, and this order is preserved when you access them.</li>
+        <li><strong>Mutable</strong>: Lists are mutable, meaning you can change their content without changing their
+            identity. You can add, remove, or modify elements in a list.</li>
+        <li><strong>Heterogeneous</strong>: Lists can contain elements of different types. For example, you can have a
+            list that contains integers, strings, and even other lists.</li>
+        <li><strong>Indexable</strong>: You can access elements of a list using an index. Indices start at 0, meaning
+            the first element is accessed with index 0, the second with index 1, and so on.</li>
+        <li><strong>Dynamic</strong>: The size of a list can change dynamically. You can add as many elements as you
+            want without declaring the size of the list upfront.</li>
+        <li><strong>Supports various operations</strong>: Lists support a variety of operations such as slicing,
+            concatenation, repetition, and list comprehensions.</li>
+    </ul>
+    <h3>Example</h3>
+
+    <ul>
+        <li>
+            <p>Creating a list:</p>
+            <div class="codeName">Python</div>
+            <pre><code>
+mixed_list = [ "apple", 42, True, 3.14, 42, True ]
+mixed_list_class = list("apple") # [ 'a', 'p', 'p', 'l', 'e' ]</code></pre>
+        </li>
+
+        <li>
+            <p>Accessing 3.14 in mixed list:</p>
+            <div class="codeName">Python</div>
+            <pre><code>
+print(mixed_list[3])</code></pre>
+        </li>
+
+        <li>
+            <p>Modifying a list:</p>
+            <div class="codeName">Python</div>
+            <pre><code>
+mixed_list[4] = 420
+print(mixed_list) # [ 'apple', 42, True, 3.14, 420, True ]</code></pre>
+        </li>
+    </ul>
+</div>
+
+<div class="question">
+    <h3 class="summary" data-summary="List vs Tuple" id="q7">7. Discuss the difference between lists and tuples in
+        python. When would you choose to use a list over a tuple and vice versa.</h3>
+</div>
+
+<div class="answer">
+    <h3>Tuple vs List</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Aspect</th>
+                <th>List</th>
+                <th>Tuple</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mutability</td>
+                <td>Lists are mutable.</td>
+                <td>Tuples are immutable.</td>
+            </tr>
+            <tr>
+                <td>Syntax</td>
+                <td>Defined with <span class="block">[ ]</span> or <span class="block">list()</span></td>
+                <td>Defined with <span class="block">()</span> or <span class="block">tuple()</span></td>
+            </tr>
+            <tr>
+                <td>Performance</td>
+                <td>Generally slower due to mutable and extra memory for dynamic resizing.</td>
+                <td>Generally faster due to immutability.</td>
+            </tr>
+            <tr>
+                <td>Methods</td>
+                <td>List has more built-in methods because of mutability.</td>
+                <td>Tuples has fewer built-in methods due to immutability.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+
+    <h3>When to use which one</h3>
+
+    <h4>We should use list when we have:</h4>
+    <ul>
+        <li>A collection of items that change a lot over time.</li>
+        <li>Need to perform operations like appending, removing or sorting</li>
+        <li>Need more built-in functions for manipulation</li>
+    </ul>
+
+    <h4>We should use tuple when we have:</h4>
+    <ul>
+        <li>We need a collection of constant items</li>
+        <li>We want to ensure data integrity by preventing modification.</li>
+        <li>We need more memory-efficient datasets.</li>
+    </ul>
+</div>
+
+<div class="question">
+    <h2 class="summary" id="q8">8. Describe the process for creating and initialising a list in Python. Discuss
+        different methods for populating a list with elements.</h2>
+</div>
+
+<div class="answer">
+    <p>A list can be created by using square brackets <span class="block">[ ]</span> or by using <span
+            class="block">list()</span> class.</p>
+
+    <h3>Example:</h3>
+    <div class="codeName">Python</div>
+    <pre><code>
+mixed_list = [ "list", 3, 4.29, True ]
+str_list = list("apple")</code></pre>
+
+    <br>
+    <h3>Populating a list</h3>
+    <p>The different methods for populating a list with elements:</p>
+    <ul>
+        <li>Append</li>
+        <li>Extend</li>
+    </ul>
+
+    <h3>Example</h3>
+    <div class="codeName">Python</div>
+    <pre><code>
+num_list = [ 1, 2, 3 ]
+num_list.append(True) # Append method
+print(num_list) # [ 1, 2, 3, True ]
+num_list.extend([ False, 3.14 ]) # Extend method
+print(num_list) # [ 1, 2, 3, True, False, 3.14 ]</code></pre>
 </div>
