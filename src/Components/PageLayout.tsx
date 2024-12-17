@@ -11,13 +11,10 @@ import { setColors, setThemeMode } from '@/Shared/functions';
 
 import { styles as typescaleStyles } from "@material/web/typography/md-typescale-styles";
 
-const initialHue = typeof window !== 'undefined' ? parseInt(localStorage.getItem('hueValue') || '289') : 289;
-const initialTheme = typeof window !== 'undefined' ? localStorage.getItem('theme') as 'white' | 'dark' : 'dark';
-
 const PageLayout = ({ children }: { children: React.ReactNode }) => {
     const [themeChangerVisibility, setThemeChangerVisibility] = useState(false);
     const [hamburgerState, setHamburgerState] = useState(false);
-    const [hueVal, setHueVal] = useState(initialHue);
+    const [hueVal, setHueVal] = useState(0);
 
     const themeChangerClick = () => setThemeChangerVisibility(!themeChangerVisibility);
     const hamburgerClick = () => setHamburgerState(!hamburgerState);
@@ -26,9 +23,10 @@ const PageLayout = ({ children }: { children: React.ReactNode }) => {
         if (typescaleStyles.styleSheet)
             document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
 
-        setHueVal(parseInt(localStorage.getItem('hueValue') || '289'));
-        setThemeMode(initialTheme);
-        setColors(hueVal);
+        const hueLocal = parseInt(localStorage.getItem('hueValue') || '289');
+        setHueVal(hueLocal);
+        setThemeMode(localStorage.getItem('theme') as 'white' | 'dark' | null || 'dark');
+        setColors(hueLocal);
     }, []);
 
     return (
