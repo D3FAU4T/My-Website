@@ -33,25 +33,25 @@ const Syllabus = () => {
                             <tr>
                                 <td>BCAC101</td>
                                 <td>Digital Electronics</td>
-                                <td><Link href="../Syllabus/Sem 1/DE+L.pdf">Download</Link></td>
+                                <td><Link href={`../Syllabus/Sem 1/${encodeURIComponent("DE+L.pdf")}`}>Download</Link></td>
                             </tr>
 
                             <tr>
                                 <td>BCAC191</td>
                                 <td>Digital Electronics Lab</td>
-                                <td><Link href="../Syllabus/Sem 1/DE+L.pdf">Download</Link></td>
+                                <td><Link href={`../Syllabus/Sem 1/${encodeURIComponent("DE+L.pdf")}`}>Download</Link></td>
                             </tr>
 
                             <tr>
                                 <td>BCAC102</td>
                                 <td>Programming for Problem Solving through C</td>
-                                <td><Link href="../Syllabus/Sem 1/C+L.pdf">Download</Link></td>
+                                <td><Link href={`../Syllabus/Sem 1/${encodeURIComponent("C+L.pdf")}`}>Download</Link></td>
                             </tr>
 
                             <tr>
                                 <td>BCAC192</td>
                                 <td>Programming for Problem Solving Lab</td>
-                                <td><Link href="../Syllabus/Sem 1/C+L.pdf">Download</Link></td>
+                                <td><Link href={`../Syllabus/Sem 1/${encodeURIComponent("C+L.pdf")}`}>Download</Link></td>
                             </tr>
 
                             <tr>
@@ -103,25 +103,25 @@ const Syllabus = () => {
                             <tr>
                                 <td>BCAC201</td>
                                 <td>Computer Architecture</td>
-                                <td><Link href="../Syllabus/Sem 2/CA+L.pdf">Download</Link></td>
+                                <td><Link href={`../Syllabus/Sem 2/${encodeURIComponent("CA+L")}.pdf`}>Download</Link></td>
                             </tr>
 
                             <tr>
                                 <td>BCAC291</td>
                                 <td>Computer Architecture Lab</td>
-                                <td><Link href="../Syllabus/Sem 2/CA+L.pdf">Download</Link></td>
+                                <td><Link href={`../Syllabus/Sem 2/${encodeURIComponent("CA+L")}.pdf`}>Download</Link></td>
                             </tr>
 
                             <tr>
                                 <td>BCAC202</td>
                                 <td>Basics of Web Design Using HTML, CSS, JavaScript</td>
-                                <td><Link href="../Syllabus/Sem 2/HTML+L.pdf">Download</Link></td>
+                                <td><Link href={`../Syllabus/Sem 2/${encodeURIComponent("HTML+L")}.pdf`}>Download</Link></td>
                             </tr>
 
                             <tr>
                                 <td>BCAC292</td>
                                 <td>Basics of Web Design Using HTML, CSS, JavaScript Lab</td>
-                                <td><Link href="../Syllabus/Sem 2/HTML+L.pdf">Download</Link></td>
+                                <td><Link href={`../Syllabus/Sem 2/${encodeURIComponent("HTML+L")}.pdf`}>Download</Link></td>
                             </tr>
 
                             <tr>
@@ -139,7 +139,7 @@ const Syllabus = () => {
                             <tr>
                                 <td>AECC201</td>
                                 <td>Modern Indian Languages and Literature</td>
-                                <td><Link href="../Syllabus/Sem 1/English.pdf">Download</Link></td>
+                                <td><Link href="../Syllabus/Sem 2/english.pdf">Download</Link></td>
                             </tr>
 
                             <tr>
@@ -186,13 +186,13 @@ const Syllabus = () => {
                             <tr>
                                 <td>BCAC302</td>
                                 <td>Data Structure through C</td>
-                                <td><Link href="../Syllabus/Sem 3/DSC+L.pdf">Download</Link></td>
+                                <td><Link href={`../Syllabus/Sem 3/${encodeURIComponent("DSC+L")}.pdf`}>Download</Link></td>
                             </tr>
 
                             <tr>
                                 <td>BCAC392</td>
                                 <td>Data Structure Lab</td>
-                                <td><Link href="../Syllabus/Sem 3/DSC+L.pdf">Download</Link></td>
+                                <td><Link href={`../Syllabus/Sem 3/${encodeURIComponent("DSC+L")}.pdf`}>Download</Link></td>
                             </tr>
 
                             <tr>
@@ -204,7 +204,7 @@ const Syllabus = () => {
                             <tr>
                                 <td>GE6B-06</td>
                                 <td>Value & Ethics</td>
-                                <td><Link href="../Syllabus/Sem 3/Value & Ethics.pdf">Download</Link></td>
+                                <td><Link href={`../Syllabus/Sem 3/${encodeURIComponent("Value & Ethics")}.pdf`}>Download</Link></td>
                             </tr>
 
                             <tr>
