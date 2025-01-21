@@ -1,3 +1,5 @@
+import { ReactElement } from "react";
+
 export type SummaryType = {
     Name: string;
     Link: string;
@@ -31,7 +33,7 @@ export interface WordleOptions extends GameOptions {
 
 export interface AssignmentOptions {
     Name: string;
-    Description: JSX.Element[];
+    Description: ReactElement[];
     DueDate: string;
     Status: "Pending" | "Turned-in" | "Done";
     Redirect: string;

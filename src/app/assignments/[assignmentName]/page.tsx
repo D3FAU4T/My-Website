@@ -2,7 +2,7 @@ import PageLayout from "@/Components/PageLayout";
 import { readFileSync } from "fs";
 import path from "path";
 import * as cheerio from 'cheerio';
-import React from "react";
+import React, { ReactElement } from "react";
 import Script from "next/script";
 
 const AssignmentContent = async ({ params }: { params: Promise<{ assignmentName: string; }> }) => {
@@ -11,7 +11,7 @@ const AssignmentContent = async ({ params }: { params: Promise<{ assignmentName:
     const $ = cheerio.load(data);
     
     const pageTitle = $('.page-title').text();
-    const summary: JSX.Element[] = [];
+    const summary: ReactElement[] = [];
 
     $('.summary').each((i, el) => {
         const data = $(el);
