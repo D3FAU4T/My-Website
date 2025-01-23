@@ -32,22 +32,29 @@ const ThemeChanger = (Props: Options) => {
         <div className={Props.IsActive ? "visible" : ""} id="theme-changer">
             <div>
                 <h2>Theme Controls</h2>
+                {/* @ts-ignore */}
                 <md-list-item type="button" id="themeCopy" onClick={copyColor} suppressHydrationWarning>
                     <span className="material-symbols-outlined" ref={copyBtnText}>Content_Copy</span>
+                {/* @ts-ignore */}
                 </md-list-item>
             </div>
 
             <div>
                 <p>Hue</p>
+                {/* @ts-ignore */}
                 <md-slider id="hue-slider" min="0" max="360" value={Props.Hue} onInput={changeColor} suppressHydrationWarning></md-slider>
                 <div className="hue" id="hue-display"></div>
             </div>
             <div>
+                {/* @ts-ignore */}
                 <md-outlined-button title="Enable Dark Mode" id="darkmodeon" onClick={darkMode} suppressHydrationWarning>
                     <span className="material-symbols-outlined">Dark_Mode</span>
+                {/* @ts-ignore */}
                 </md-outlined-button>
+                {/* @ts-ignore */}
                 <md-outlined-button title="Enable Light Mode" id="lightmodeon" onClick={lightMode} suppressHydrationWarning>
                     <span className="material-symbols-outlined">Light_Mode</span>
+                {/* @ts-ignore */}
                 </md-outlined-button>
             </div>
         </div>

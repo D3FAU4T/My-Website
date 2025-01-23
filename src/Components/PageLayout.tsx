@@ -33,16 +33,20 @@ const PageLayout = ({ children }: { children: React.ReactNode }) => {
         <>
             <header>
                 <div>
+                    {/* @ts-ignore */}
                     <md-list-item type="button" id="hamBtn" onClick={hamburgerClick} suppressHydrationWarning>
                         <span className="material-symbols-outlined">Menu</span>
+                    {/* @ts-ignore */}
                     </md-list-item>
                 </div>
 
                 <a href="/">D3FAU4T's Space</a>
 
                 <div>
+                    {/* @ts-ignore */}
                     <md-list-item type="button" id="paletteBtn" onClick={themeChangerClick} suppressHydrationWarning>
                         <span className="material-symbols-outlined">Palette</span>
+                    {/* @ts-ignore */}
                     </md-list-item>
                 </div>
 
