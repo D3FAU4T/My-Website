@@ -24,191 +24,189 @@ const Wordles = () => {
     return (
         <PageLayout>
             <main>
-                <section className="scrollbar-wrapper" id="section">
-                    <h1>Wordle games</h1>
-                    <p>Wordle games are word-based puzzles or games that challenge players to guess a hidden word based on clues or limited
-                        attempts. Below are some popular Wordle games enlisted for easier access and convenience.</p>
-                    <br />
-                    <h2>Games:</h2>
+                <h1 className="page-title">Wordle games</h1>
+                <p>Wordle games are word-based puzzles or games that challenge players to guess a hidden word based on clues or limited
+                    attempts. Below are some popular Wordle games enlisted for easier access and convenience.</p>
+                <br />
+                <h2>Games:</h2>
 
-                    <div className="card-container">
-                        <Link className="card" href="https://powerlanguage-wordle.github.io/" id="w1" target="_blank" rel="noopener">
-                            <div className="img-wrapper">
-                                <img src="/Assets/Wordle.jpeg" alt="Wordle" />
+                <div className="card-container">
+                    <Link href="https://powerlanguage-wordle.github.io/" id="w1" target="_blank" rel="noopener">
+                        <div>
+                            <img src="/Assets/Wordle.jpeg" alt="Wordle" />
+                        </div>
+                        <div>
+                            <div>
+                                <h2>Wordle</h2>
+                                <h1>1</h1>
                             </div>
-                            <div className="img-desc">
-                                <div>
-                                    <h2>Wordle</h2>
-                                    <h1>1</h1>
-                                </div>
-                                <p>The classic game where you guess a five-letter word in six tries or less by receiving feedback on correct
-                                    letters and their positions.</p>
-                            </div>
-                        </Link>
+                            <p>The classic game where you guess a five-letter word in six tries or less by receiving feedback on correct
+                                letters and their positions.</p>
+                        </div>
+                    </Link>
 
-                        <Link className="card" href="https://dordlewordle.com/" id="w2" target="_blank" rel="noopener">
-                            <div className="img-wrapper">
-                                <img src="/Assets/Dordle.jpeg" alt="Dordle" />
+                    <Link href="https://dordlewordle.com/" id="w2" target="_blank" rel="noopener">
+                        <div>
+                            <img src="/Assets/Dordle.jpeg" alt="Dordle" />
+                        </div>
+                        <div>
+                            <div>
+                                <h2>Dordle</h2>
+                                <h1>2</h1>
                             </div>
-                            <div className="img-desc">
-                                <div>
-                                    <h2>Dordle</h2>
-                                    <h1>2</h1>
-                                </div>
-                                <p>You can do 1 Wordle. But can you do 2 Wordles simultaneously?</p>
-                            </div>
-                        </Link>
+                            <p>You can do 1 Wordle. But can you do 2 Wordles simultaneously?</p>
+                        </div>
+                    </Link>
 
-                        <Link className="card" href="https://hexordle.com/?mode=freeT" id="w3" target="_blank" rel="noopener">
-                            <div className="img-wrapper">
-                                <img src="/Assets/Trodle.jpeg" alt="Trodle" />
+                    <Link href="https://hexordle.com/?mode=freeT" id="w3" target="_blank" rel="noopener">
+                        <div>
+                            <img src="/Assets/Trodle.jpeg" alt="Trodle" />
+                        </div>
+                        <div>
+                            <div>
+                                <h2>Trodle</h2>
+                                <h1>3</h1>
                             </div>
-                            <div className="img-desc">
-                                <div>
-                                    <h2>Trodle</h2>
-                                    <h1>3</h1>
-                                </div>
-                                <p>Inspired from the other Wordle games, Trodle is a combination of 3 Wordles simultaneously</p>
-                            </div>
-                        </Link>
+                            <p>Inspired from the other Wordle games, Trodle is a combination of 3 Wordles simultaneously</p>
+                        </div>
+                    </Link>
 
-                        <Link className="card" href="https://quordlegame.com/" id="w4" target="_blank" rel="noopener">
-                            <div className="img-wrapper">
-                                <img src="/Assets/Quordle.jpeg" alt="Quordle" />
+                    <Link href="https://quordlegame.com/" id="w4" target="_blank" rel="noopener">
+                        <div>
+                            <img src="/Assets/Quordle.jpeg" alt="Quordle" />
+                        </div>
+                        <div>
+                            <div>
+                                <h2>Quordle</h2>
+                                <h1>4</h1>
                             </div>
-                            <div className="img-desc">
-                                <div>
-                                    <h2>Quordle</h2>
-                                    <h1>4</h1>
-                                </div>
-                                <p>Same as Wordle except you've to do 4 different Wordles simultaneously.</p>
-                            </div>
-                        </Link>
+                            <p>Same as Wordle except you've to do 4 different Wordles simultaneously.</p>
+                        </div>
+                    </Link>
 
-                        <Link className="card" href="https://hexordle.com/?mode=free" id="w6" target="_blank" rel="noopener">
-                            <div className="img-wrapper">
-                                <img src="/Assets/Hexordle.jpeg" alt="Hexordle" />
+                    <Link href="https://hexordle.com/?mode=free" id="w6" target="_blank" rel="noopener">
+                        <div>
+                            <img src="/Assets/Hexordle.jpeg" alt="Hexordle" />
+                        </div>
+                        <div>
+                            <div>
+                                <h2>Hexordle</h2>
+                                <h1>6</h1>
                             </div>
-                            <div className="img-desc">
-                                <div>
-                                    <h2>Hexordle</h2>
-                                    <h1>6</h1>
-                                </div>
-                                <p>Made by Jeffrey Chen in 2022, Hexordle is 6 different Wordles at the same time.</p>
-                            </div>
-                        </Link>
+                            <p>Made by Jeffrey Chen in 2022, Hexordle is 6 different Wordles at the same time.</p>
+                        </div>
+                    </Link>
 
-                        <Link className="card" href="https://octordle.org/" id="w8" target="_blank" rel="noopener">
-                            <div className="img-wrapper">
-                                <img src="/Assets/Octordle.jpeg" alt="Octordle" />
+                    <Link href="https://octordle.org/" id="w8" target="_blank" rel="noopener">
+                        <div>
+                            <img src="/Assets/Octordle.jpeg" alt="Octordle" />
+                        </div>
+                        <div>
+                            <div>
+                                <h2>Octordle</h2>
+                                <h1>8</h1>
                             </div>
-                            <div className="img-desc">
-                                <div>
-                                    <h2>Octordle</h2>
-                                    <h1>8</h1>
-                                </div>
-                                <p>Same as Wordle except you've to do 8 different Wordles simultaneously.</p>
-                            </div>
-                        </Link>
+                            <p>Same as Wordle except you've to do 8 different Wordles simultaneously.</p>
+                        </div>
+                    </Link>
 
-                        <Link className="card" href="https://sedecordlegame.org/" id="w16" target="_blank" rel="noopener">
-                            <div className="img-wrapper">
-                                <img src="/Assets/Sedecordle.jpeg" alt="Sedecordle" />
+                    <Link href="https://sedecordlegame.org/" id="w16" target="_blank" rel="noopener">
+                        <div>
+                            <img src="/Assets/Sedecordle.jpeg" alt="Sedecordle" />
+                        </div>
+                        <div>
+                            <div>
+                                <h2>Sedecordle</h2>
+                                <h1>16</h1>
                             </div>
-                            <div className="img-desc">
-                                <div>
-                                    <h2>Sedecordle</h2>
-                                    <h1>16</h1>
-                                </div>
-                                <p>Same as Wordle except you've to do 16 different Wordles simultaneously.</p>
-                            </div>
-                        </Link>
+                            <p>Same as Wordle except you've to do 16 different Wordles simultaneously.</p>
+                        </div>
+                    </Link>
 
-                        <Link className="card" href="https://duotrigordle.com/" id="w32" target="_blank" rel="noopener">
-                            <div className="img-wrapper">
-                                <img src="/Assets/Duotrigordle.jpeg" alt="Duotrigordle" />
+                    <Link href="https://duotrigordle.com/" id="w32" target="_blank" rel="noopener">
+                        <div>
+                            <img src="/Assets/Duotrigordle.jpeg" alt="Duotrigordle" />
+                        </div>
+                        <div>
+                            <div>
+                                <h2>Duotrigordle</h2>
+                                <h1>32</h1>
                             </div>
-                            <div className="img-desc">
-                                <div>
-                                    <h2>Duotrigordle</h2>
-                                    <h1>32</h1>
-                                </div>
-                                <p>Same as Wordle except you've to do 32 different Wordles simultaneously because why not '-'</p>
-                            </div>
-                        </Link>
+                            <p>Same as Wordle except you've to do 32 different Wordles simultaneously because why not '-'</p>
+                        </div>
+                    </Link>
 
-                        <Link className="card" href="https://64ordle.au/" id="w64" target="_blank" rel="noopener">
-                            <div className="img-wrapper">
-                                <img src="/Assets/Sexagintaquattuordle.jpeg" alt="Sexagintaquattuordle" />
+                    <Link href="https://64ordle.au/" id="w64" target="_blank" rel="noopener">
+                        <div>
+                            <img src="/Assets/Sexagintaquattuordle.jpeg" alt="Sexagintaquattuordle" />
+                        </div>
+                        <div>
+                            <div>
+                                <h2>Sexaginta-Quattuordle</h2>
+                                <h1>64</h1>
                             </div>
-                            <div className="img-desc">
-                                <div>
-                                    <h2>Sexaginta-Quattuordle</h2>
-                                    <h1>64</h1>
-                                </div>
-                                <p>Same as Wordle except you've to do 64 different Wordles simultaneously. You can do it 🤌</p>
-                            </div>
-                        </Link>
+                            <p>Same as Wordle except you've to do 64 different Wordles simultaneously. You can do it 🤌</p>
+                        </div>
+                    </Link>
 
-                        <Link className="card" href="https://jonesnxt.github.io/kilordle/" id="w1000" target="_blank" rel="noopener">
-                            <div className="img-wrapper">
-                                <img src="/Assets/Kilordle.jpeg" alt="Kilordle" />
+                    <Link href="https://jonesnxt.github.io/kilordle/" id="w1000" target="_blank" rel="noopener">
+                        <div>
+                            <img src="/Assets/Kilordle.jpeg" alt="Kilordle" />
+                        </div>
+                        <div>
+                            <div>
+                                <h2>Kilordle</h2>
+                                <h1>1000</h1>
                             </div>
-                            <div className="img-desc">
-                                <div>
-                                    <h2>Kilordle</h2>
-                                    <h1>1000</h1>
-                                </div>
-                                <p>Wordle is fun. How about a thousand of them at the same time. How does that feel?</p>
-                            </div>
-                        </Link>
+                            <p>Wordle is fun. How about a thousand of them at the same time. How does that feel?</p>
+                        </div>
+                    </Link>
 
-                        <Link className="card" href="https://myriadle.semrai.com/" id="w10000" target="_blank" rel="noopener">
-                            <div className="img-wrapper">
-                                <img src="/Assets/Myriadle.jpeg" alt="Myriadle" />
+                    <Link href="https://myriadle.semrai.com/" id="w10000" target="_blank" rel="noopener">
+                        <div>
+                            <img src="/Assets/Myriadle.jpeg" alt="Myriadle" />
+                        </div>
+                        <div>
+                            <div>
+                                <h2>Myriadle</h2>
+                                <h1>10000</h1>
                             </div>
-                            <div className="img-desc">
-                                <div>
-                                    <h2>Myriadle</h2>
-                                    <h1>10000</h1>
-                                </div>
-                                <p>No, there is no extra zero by mistake. That is ten thousand, yes you read it right. 10k Wordles.</p>
-                            </div>
-                        </Link>
+                            <p>No, there is no extra zero by mistake. That is ten thousand, yes you read it right. 10k Wordles.</p>
+                        </div>
+                    </Link>
 
-                        <Link className="card" href="https://qwordle.bhat.ca/" id="wq" target="_blank" rel="noopener">
-                            <div className="img-wrapper">
-                                <img src="/Assets/QWordle.jpeg" alt="QWordle" />
-                            </div>
-                            <div className="img-desc">
-                                <div>
-                                    <h2>QWordle</h2>
-                                    <div style={{ display: "flex", flexDirection: "row", gap: "16px" }}>
-                                        <h1>Quantum</h1>
-                                        <span className="material-symbols-outlined" style={{ paddingTop: "23px" }}>science</span>
-                                    </div>
+                    <Link href="https://qwordle.bhat.ca/" id="wq" target="_blank" rel="noopener">
+                        <div>
+                            <img src="/Assets/QWordle.jpeg" alt="QWordle" />
+                        </div>
+                        <div>
+                            <div>
+                                <h2>QWordle</h2>
+                                <div style={{ display: "flex", flexDirection: "row", gap: "16px" }}>
+                                    <h1>Quantum</h1>
+                                    <span className="material-symbols-outlined" style={{ paddingTop: "23px" }}>science</span>
                                 </div>
-                                <p>The Q in Wordle stands for "Quantum" where there are 2 different Wordles merged into an entangled-pair.</p>
                             </div>
-                        </Link>
+                            <p>The Q in Wordle stands for "Quantum" where there are 2 different Wordles merged into an entangled-pair.</p>
+                        </div>
+                    </Link>
 
-                        <Link className="card" href="https://polygonle.com/" id="plygn" target="_blank" rel="noopener">
-                            <div className="img-wrapper">
-                                <img src="/Assets/Polygonle.jpeg" alt="QWordle" />
-                            </div>
-                            <div className="img-desc">
-                                <div>
-                                    <h2>Polygonle</h2>
-                                    <div style={{ display: "flex", flexDirection: "row", gap: "16px" }}>
-                                        <h1>Shape</h1>
-                                        <span className="material-symbols-outlined" style={{ paddingTop: "23px" }}>shapes</span>
-                                    </div>
+                    <Link href="https://polygonle.com/" id="plygn" target="_blank" rel="noopener">
+                        <div>
+                            <img src="/Assets/Polygonle.jpeg" alt="QWordle" />
+                        </div>
+                        <div>
+                            <div>
+                                <h2>Polygonle</h2>
+                                <div style={{ display: "flex", flexDirection: "row", gap: "16px" }}>
+                                    <h1>Shape</h1>
+                                    <span className="material-symbols-outlined" style={{ paddingTop: "23px" }}>shapes</span>
                                 </div>
-                                <p>Polygonle features a character cursor for visualizing words without filling every letter. Click a tile to fill it and navigate the cursor with spacebar or arrow keys instead of typing.</p>
                             </div>
-                        </Link>
-                    </div>
-                </section>
+                            <p>Polygonle features a character cursor for visualizing words without filling every letter. Click a tile to fill it and navigate the cursor with spacebar or arrow keys instead of typing.</p>
+                        </div>
+                    </Link>
+                </div>
             </main>
             <Summary Elements={summaries} PageName="Wordles" style={{ display: "flex", flexDirection: "column", gap: "15px", paddingTop: "10px" }} />
         </PageLayout>

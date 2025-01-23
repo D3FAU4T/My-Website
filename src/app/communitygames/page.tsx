@@ -76,81 +76,80 @@ const CommunityGames = () => {
 
     useEffect(() => {
         fetch(window.location.origin + '/Data/CommunityGames.json')
-        .then(res => res.json())
-        .then(response => setData(response))
-        .catch(err => setData({}));
+            .then(res => res.json())
+            .then(response => setData(response))
+            .catch(err => setData({}));
     }, []);
 
     return (
         <PageLayout>
             <main>
-                <section className="scrollbar-wrapper" id="section">
-                    <h1>Community Games</h1>
+                <h1 className="page-title">Community Games</h1>
 
-                    <p>Enjoy a wide range of community games from word to geography to musical. All enlisted in a single place to access for
-                        convenience.</p>
+                <p>Enjoy a wide range of community games from word to geography to musical. All enlisted in a single place to access for
+                    convenience.</p>
 
-                    <div className="iconed-heading">
-                        <span slot="start" className="material-symbols-outlined">abc</span>
-                        <h2 id="wrdGames">Word games:</h2>
-                    </div>
+                <div className="iconed-heading">
+                    <span slot="start" className="material-symbols-outlined">abc</span>
+                    <h2 id="wrdGames">Word games:</h2>
+                </div>
 
-                    <div className="card-container">{
-                        data?.word.map(game => <Game key={game.ID} Name={game.Name} ID={game.ID} Image={game.Image} Link={game.Link} Description={game.Description} />)
-                    }</div>
+                <div className="card-container">{
+                    data?.word.map(game => <Game key={game.ID} Name={game.Name} ID={game.ID} Image={game.Image} Link={game.Link} Description={game.Description} />)
+                }</div>
 
-                    <br /><br />
+                <br /><br />
 
-                    <div className="iconed-heading">
-                        <span slot="start" className="material-symbols-outlined">globe</span>
-                        <h2 id="grGames">Geography games:</h2>
-                    </div>
+                <div className="iconed-heading">
+                    <span slot="start" className="material-symbols-outlined">globe</span>
+                    <h2 id="grGames">Geography games:</h2>
+                </div>
 
-                    <br />
+                <br />
 
-                    <div className="card-container">{
-                        data?.geography.map(game => <Game key={game.ID} Name={game.Name} ID={game.ID} Image={game.Image} Link={game.Link} Description={game.Description} />)
-                    }</div>
+                <div className="card-container">{
+                    data?.geography.map(game => <Game key={game.ID} Name={game.Name} ID={game.ID} Image={game.Image} Link={game.Link} Description={game.Description} />)
+                }</div>
 
-                    <br /><br />
+                <br /><br />
 
-                    <div className="iconed-heading">
-                        <span slot="start" className="material-symbols-outlined">calculate</span>
-                        <h2 id="mtGames">Mathematical games:</h2>
-                    </div>
+                <div className="iconed-heading">
+                    <span slot="start" className="material-symbols-outlined">calculate</span>
+                    <h2 id="mtGames">Mathematical games:</h2>
+                </div>
 
-                    <br />
+                <br />
 
-                    <div className="card-container">{
-                        data?.math.map(game => <Game key={game.ID} Name={game.Name} ID={game.ID} Image={game.Image} Link={game.Link} Description={game.Description} />)
-                    }</div>
+                <div className="card-container">{
+                    data?.math.map(game => <Game key={game.ID} Name={game.Name} ID={game.ID} Image={game.Image} Link={game.Link} Description={game.Description} />)
+                }</div>
 
-                    <br /><br />
+                <br /><br />
 
-                    <div className="iconed-heading">
-                        <span slot="start" className="material-symbols-outlined">crossword</span>
-                        <h2 id="qzGames">Quiz & Crossword games:</h2>
-                    </div>
+                <div className="iconed-heading">
+                    <span slot="start" className="material-symbols-outlined">crossword</span>
+                    <h2 id="qzGames">Quiz & Crossword games:</h2>
+                </div>
 
-                    <br />
+                <br />
 
-                    <div className="card-container">{
-                        data?.quiz.map(game => <Game key={game.ID} Name={game.Name} ID={game.ID} Image={game.Image} Link={game.Link} Description={game.Description} />)
-                    }</div>
+                <div className="card-container">{
+                    data?.quiz.map(game => <Game key={game.ID} Name={game.Name} ID={game.ID} Image={game.Image} Link={game.Link} Description={game.Description} />)
+                }</div>
 
-                    <br /><br />
+                <br />
+                <br />
 
-                    <div className="iconed-heading">
-                        <span slot="start" className="material-symbols-outlined">subscriptions</span>
-                        <h2 id="mdGames">Medias:</h2>
-                    </div>
+                <div className="iconed-heading">
+                    <span slot="start" className="material-symbols-outlined">subscriptions</span>
+                    <h2 id="mdGames">Medias:</h2>
+                </div>
 
-                    <br />
+                <br />
 
-                    <div className="card-container">{
-                        data?.medias.map(game => <Game key={game.ID} Name={game.Name} ID={game.ID} Image={game.Image} Link={game.Link} Description={game.Description} />)
-                    }</div>
-                </section>
+                <div className="card-container">{
+                    data?.medias.map(game => <Game key={game.ID} Name={game.Name} ID={game.ID} Image={game.Image} Link={game.Link} Description={game.Description} />)
+                }</div>
             </main>
             <Summary PageName="Community Games" Elements={summaries} />
         </PageLayout>

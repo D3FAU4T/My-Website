@@ -38,7 +38,7 @@ const PageLayout = ({ children }: { children: React.ReactNode }) => {
                     </md-list-item>
                 </div>
 
-                <a className="Webpage-Name" href="/"><b>D3FAU4T's Space</b></a>
+                <a href="/">D3FAU4T's Space</a>
 
                 <div>
                     <md-list-item type="button" id="paletteBtn" onClick={themeChangerClick} suppressHydrationWarning>

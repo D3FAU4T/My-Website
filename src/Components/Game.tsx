@@ -5,11 +5,11 @@ import { GameOptions } from "@/Shared/typings";
 
 const Game = (Props: GameOptions) => {
     return (
-        <Link className="card" href={Props.Link} id={Props.ID} target="_blank" rel="noopener">
-            <div className="img-wrapper">
+        <Link href={Props.Link} id={Props.ID} target="_blank" rel="noopener">
+            <div>
                 <Image src={Props.Image} width={1280} height={720} alt={Props.Name} />
             </div>
-            <div className="img-desc">
+            <div>
                 <h2>{Props.Name}</h2>
                 <p>{Props.Description}</p>
             </div>

@@ -5,6 +5,8 @@ export const setColors = (hueValue: number) => {
 
 export const setThemeMode = (mode: "white" | "dark") => {
     const root = document.documentElement;
+    const link = document.getElementById('theme-color') as HTMLLinkElement;
+
     if (mode == "white") {
         root.style.setProperty('--md-sys-color-background', '#f7f9ff');
         root.style.setProperty('--md-sys-color-surface', '#ebeef3');
@@ -17,6 +19,7 @@ export const setThemeMode = (mode: "white" | "dark") => {
         root.style.setProperty('--note-border-color-hover', `var(--md-sys-color-text)`);
         root.style.setProperty('--link-decoration', `underline`);
         (document.querySelector('#wordleIcon > g') as SVGGElement).style.fill = '#000000';
+        link.href = link.href.replace('github-dark-dimmed', 'atom-one-light');
         localStorage.setItem('theme', 'white');
     } else {
         root.style.setProperty('--md-sys-color-background', '#10131b');
@@ -30,6 +33,7 @@ export const setThemeMode = (mode: "white" | "dark") => {
         root.style.setProperty('--note-border-color-hover', `var(--md-sys-color-primary)`);
         root.style.setProperty('--link-decoration', `none`);
         (document.querySelector('#wordleIcon > g') as SVGGElement).style.fill = '#ffffff';
+        link.href = link.href.replace('atom-one-light', 'github-dark-dimmed');
         localStorage.setItem('theme', 'dark');
     }
 }

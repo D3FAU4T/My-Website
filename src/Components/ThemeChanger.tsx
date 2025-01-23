@@ -30,20 +30,19 @@ const ThemeChanger = (Props: Options) => {
 
     return (
         <div className={Props.IsActive ? "visible" : ""} id="theme-changer">
-            <div className="theme-copy">
+            <div>
                 <h2>Theme Controls</h2>
                 <md-list-item type="button" id="themeCopy" onClick={copyColor} suppressHydrationWarning>
                     <span className="material-symbols-outlined" ref={copyBtnText}>Content_Copy</span>
                 </md-list-item>
             </div>
-            <div className="option-cover">
-                <div id="theme-option">
-                    <p>Hue</p>
-                    <md-slider id="hue-slider" min="0" max="360" value={Props.Hue} onInput={changeColor} suppressHydrationWarning></md-slider>
-                </div>
+
+            <div>
+                <p>Hue</p>
+                <md-slider id="hue-slider" min="0" max="360" value={Props.Hue} onInput={changeColor} suppressHydrationWarning></md-slider>
                 <div className="hue" id="hue-display"></div>
             </div>
-            <div className="darkMode">
+            <div>
                 <md-outlined-button title="Enable Dark Mode" id="darkmodeon" onClick={darkMode} suppressHydrationWarning>
                     <span className="material-symbols-outlined">Dark_Mode</span>
                 </md-outlined-button>
@@ -58,7 +57,7 @@ const ThemeChanger = (Props: Options) => {
 const hslToHex = (hue: number, saturation: number, lightness: number) => {
     lightness /= 100;
     const chroma = saturation * Math.min(lightness, 1 - lightness) / 100;
-    
+
     const getColorComponent = (offset: number) => {
         const componentHue = (offset + hue / 30) % 12;
         const color = lightness - chroma * Math.max(Math.min(componentHue - 3, 9 - componentHue, 1), -1);
