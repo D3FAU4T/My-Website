@@ -22,12 +22,12 @@ export const metadata: Metadata = {
     title: "D3FAU4T's Space",
     description: "Welcome to D3FAU4T's Space! A comprehensive view of D3FAU4T's academic coursework, personal projects, and favorite hobbies! This site serves as both a portfolio and a learning ground for web design, highlighting his academic and recreational activities",
     images: {
-      url: "https://d3fau4t.vercel.app/favicon.ico",
-      type: "image/x-icon",
-      width: 128,
-      height: 128,
+      url: "https://d3fau4t.vercel.app/Assets/favicon.png",
+      type: "image/png",
+      width: 256,
+      height: 256,
       alt: "D3FAU4TBOT icon",
-      secureUrl: "https://d3fau4t.vercel.app/favicon.ico"
+      secureUrl: "https://d3fau4t.vercel.app/Assets/favicon.png"
     }
   }
 };
