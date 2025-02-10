@@ -258,6 +258,24 @@ const Syllabus = () => {
                             <td>Software Engineering</td>
                             <td><Link href="../Syllabus/Sem 4/Software Engineering.pdf">Download</Link></td>
                         </tr>
+
+                        <tr>
+                            <td>MIM401A</td>
+                            <td>Human Resource Management</td>
+                            <td><Link href="../Syllabus/Sem 4/Human Resource Management.pdf">Download</Link></td>
+                        </tr>
+
+                        <tr>
+                            <td>MIM402B</td>
+                            <td>E-commerce</td>
+                            <td><Link href={`../Syllabus/Sem 4/${encodeURIComponent("E-commerce")}.pdf`}>Download</Link></td>
+                        </tr>
+
+                        <tr>
+                            <td>AECC401A</td>
+                            <td>Society Culture and Human Behaviour</td>
+                            <td><Link href="../Syllabus/Sem 4/Society Culture and Human Behaviour.pdf">Download</Link></td>
+                        </tr>
                     </tbody>
                 </table>
             </main>
