@@ -19,7 +19,8 @@ const summaries: SummaryType[] = [
             { Name: "Phrasle", Link: "phrasle", IsAnId: true },
             { Name: "Squaredle", Link: "squaredle", IsAnId: true },
             { Name: "Pimantle", Link: "pimantle", IsAnId: true },
-            { Name: "Connections", Link: "connections", IsAnId: true }
+            { Name: "Connections", Link: "connections", IsAnId: true },
+            { Name: "Decipher", Link: "decipher", IsAnId: true },
         ]
     },
     {
