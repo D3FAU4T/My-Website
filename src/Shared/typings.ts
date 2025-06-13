@@ -30,11 +30,3 @@ export interface WordleOptions extends GameOptions {
     Type?: string;
     Icon?: string;
 }
-
-export interface AssignmentOptions {
-    Name: string;
-    Description: ReactElement[];
-    DueDate: string;
-    Status: "Pending" | "Turned-in" | "Done";
-    Redirect: string;
-}

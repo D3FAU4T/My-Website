@@ -57,12 +57,6 @@ const NavBar = (Props: Options) => {
                     {/* @ts-ignore */}
                 </md-list-item>
                 {/* @ts-ignore */}
-                <md-list-item type="button" id="Assignment" onClick={() => router.push('/assignments')} suppressHydrationWarning>
-                    <p>Assignments</p>
-                    <span slot="start" className="material-symbols-outlined">assignment</span>
-                    {/* @ts-ignore */}
-                </md-list-item>
-                {/* @ts-ignore */}
                 <md-item suppressHydrationWarning>
                     <div slot="headline">Games</div>
                     <span slot="end" className="material-symbols-outlined">Stadia_Controller</span>
