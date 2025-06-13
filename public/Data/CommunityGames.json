@@ -62,6 +62,13 @@
             "Image": "/Assets/Connections.jpeg",
             "Link": "https://www.nytimes.com/games/connections",
             "Description": "Identify groups of related words from a list and categorize them correctly. It's a game of finding hidden connections and patterns, challenging your lateral thinking and vocabulary. Think of it as a fun brain-teasing puzzle from The New York Times!"
+        },
+        {
+            "Name": "Decipher",
+            "ID": "decipher",
+            "Image": "/Assets/Decipher.png",
+            "Link": "https://decipher.wtf/",
+            "Description": "Decipher the cryptogram by figuring out which original letter each substituted letter represents."
         }
     ],
     "geography": [
