@@ -1,5 +1,3 @@
-import { ReactElement } from "react";
-
 export type SummaryType = {
     Name: string;
     Link: string;
@@ -29,4 +27,20 @@ export interface WordleOptions extends GameOptions {
     Quantity: number | null;
     Type?: string;
     Icon?: string;
+}
+
+export interface Subject {
+    code: string;
+    name: string;
+    syllabusPath: string | null;
+}
+
+export interface SemesterData {
+    id: string;
+    title: string;
+    subjects: Subject[];
+}
+
+export interface SyllabusMetadata {
+    semesters: SemesterData[];
 }
