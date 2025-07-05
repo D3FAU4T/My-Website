@@ -38,7 +38,7 @@ header {
     align-items: center;
     justify-content: space-between;
     height: 8%;
-    padding: 0rem 0.75rem;
+    padding: 0rem 1.5rem;
 }
 
 header>a {
@@ -125,8 +125,8 @@ header>div>md-list-item {
 
 main {
     flex: 1;
-    padding: 1rem;
-    margin: 0rem 1rem;
+    padding: 0rem 2rem;
+    margin: 0rem 0rem 1rem 2rem;
     border-radius: var(--border-radius);
     background-color: var(--md-sys-color-background);
     overflow-y: auto;
@@ -141,11 +141,12 @@ main {
 .overview {
     width: 15rem;
     padding: 2rem;
-    margin-right: 1rem;
+    margin-right: 2rem;
     border-radius: var(--border-radius);
     background-color: var(--md-sys-color-background);
     overflow-y: auto;
     scroll-behavior: smooth;
+    margin-bottom: 1rem;
 }
 
 .overview>p:first-child {
@@ -283,7 +284,7 @@ tr:last-child>td:first-child {
     text-decoration-style: wavy;
 }
 
-.note:hover > div > .flag {
+.note:hover>div>.flag {
     border-color: #000000;
 }
 
@@ -361,6 +362,11 @@ pre>code {
 
     .overview {
         display: none;
+    }
+
+    main {
+        padding: 0rem 1.3rem;
+        margin: 0rem 1rem 0rem 1rem;
     }
 
     th {
