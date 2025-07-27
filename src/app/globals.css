@@ -98,20 +98,47 @@ header>div>md-list-item {
     position: relative;
     height: 90%;
     gap: 1rem;
+    transition: margin-left 250ms ease-in-out;
 }
 
 .navbar {
-    position: absolute;
-    height: 100%;
+    position: fixed;
+    left: -13rem;
+    top: 8%;
+    height: 90%;
     width: 13rem;
-    transition: ease-in-out 250ms;
-    transition-property: width;
+    background-color: transparent;
+    transition: left 250ms ease-in-out;
     overflow-y: auto;
     scroll-behavior: smooth;
+    z-index: 100;
+}
+
+.navbar.open {
+    left: 0;
+}
+
+.container.navbar-open {
+    margin-left: 13rem;
 }
 
 .navbar>md-list {
-    height: inherit;
+    height: 100%;
+    background-color: var(--md-sys-color-surface);
+    border-radius: var(--border-radius);
+    margin: 0;
+    padding: 0.5rem;
+    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+.navbar md-list-item {
+    border-radius: var(--border-radius) !important;
+    margin: 0.25rem 0;
+}
+
+.navbar md-item {
+    border-radius: var(--border-radius) !important;
+    margin: 0.25rem 0;
 }
 
 .selected {
@@ -240,7 +267,7 @@ tr:last-child>td:first-child {
 
 .card-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1.25rem;
 }
 
@@ -380,6 +407,40 @@ pre>code {
     .codelang,
     pre>code {
         width: 100%;
+    }
+
+    /* Mobile navbar behavior - sliding overlay */
+    .container {
+        margin-left: 0 !important;
+        transition: none;
+    }
+
+    .navbar {
+        position: fixed;
+        left: -13rem;
+        top: 8%;
+        height: 90%;
+        width: 13rem;
+        background-color: transparent;
+        transition: left 250ms ease-in-out;
+        z-index: 100;
+    }
+
+    .navbar>md-list {
+        background-color: var(--md-sys-color-surface);
+        border-radius: var(--border-radius);
+        height: 100%;
+        margin: 0;
+        padding: 0.5rem;
+        box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar.open {
+        left: 0;
+    }
+
+    .container.navbar-open {
+        margin-left: 0 !important;
     }
 }
 
