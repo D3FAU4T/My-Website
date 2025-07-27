@@ -36,7 +36,7 @@ const PageLayout = ({ children }: { children: React.ReactNode }) => {
                     {/* @ts-ignore */}
                     <md-list-item type="button" id="hamBtn" onClick={hamburgerClick} suppressHydrationWarning>
                         <span className="material-symbols-outlined">Menu</span>
-                    {/* @ts-ignore */}
+                        {/* @ts-ignore */}
                     </md-list-item>
                 </div>
 
@@ -46,14 +46,14 @@ const PageLayout = ({ children }: { children: React.ReactNode }) => {
                     {/* @ts-ignore */}
                     <md-list-item type="button" id="paletteBtn" onClick={themeChangerClick} suppressHydrationWarning>
                         <span className="material-symbols-outlined">Palette</span>
-                    {/* @ts-ignore */}
+                        {/* @ts-ignore */}
                     </md-list-item>
                 </div>
 
                 <ThemeChanger IsActive={themeChangerVisibility} Hue={hueVal} />
             </header>
 
-            <div className='container'>
+            <div className={`container ${hamburgerState ? 'navbar-open' : ''}`}>
                 <NavBar IsActive={hamburgerState} />
                 {children}
             </div>

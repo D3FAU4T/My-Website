@@ -19,19 +19,14 @@ const NavBar = (Props: Options) => {
 
     const bar = useRef<HTMLElement | null>(null);
 
-    const closeSidebar = () => {
-        bar.current!.style.width = '0px';
-        setTimeout(() => bar.current!.style.display = 'none', 300);
-    }
-
-    const openSidebar = () => {
-        bar.current!.style.display = 'block';
-        setTimeout(() => bar.current!.style.width = '13rem', 10);
-    }
+    const closeSidebar = () => bar.current!.classList.remove('open');
+    const openSidebar = () => bar.current!.classList.add('open');
 
     useEffect(() => {
-        if (Props.IsActive) openSidebar();
-        else closeSidebar();
+        if (Props.IsActive)
+            openSidebar();
+        else
+            closeSidebar();
     }, [Props.IsActive]);
 
     return (
@@ -66,7 +61,7 @@ const NavBar = (Props: Options) => {
                 <md-list-item type="button" id="Onrizon Games" onClick={() => router.push('/onrizongames')} suppressHydrationWarning>
                     <p>Onrizon Games</p>
                     <OnrizonSVG />
-                {/* @ts-ignore */}
+                    {/* @ts-ignore */}
                 </md-list-item>
                 {/* @ts-ignore */}
                 <md-list-item type="button" id="Wordles" onClick={() => router.push('/wordles')} suppressHydrationWarning>
@@ -78,9 +73,9 @@ const NavBar = (Props: Options) => {
                 <md-list-item type="button" id="Community Games" onClick={() => router.push('/communitygames')} suppressHydrationWarning>
                     <p>Community Games</p>
                     <span slot="start" className="material-symbols-outlined">games</span>
-                {/* @ts-ignore */}
+                    {/* @ts-ignore */}
                 </md-list-item>
-            {/* @ts-ignore */}
+                {/* @ts-ignore */}
             </md-list>
         </aside>
     )
