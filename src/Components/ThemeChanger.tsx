@@ -1,6 +1,6 @@
 "use client";
-import '@material/web/slider/slider';
-import '@material/web/button/outlined-button';
+import '@material/web/slider/slider.js';
+import '@material/web/button/outlined-button.js';
 import { useRef } from 'react';
 import { setColors, setThemeMode } from '../Shared/functions';
 
@@ -22,8 +22,10 @@ const ThemeChanger = (Props: Options) => {
         setTimeout(() => copyBtnText.current!.textContent = 'Content_Copy', 500);
     };
 
-    const changeColor = (event: InputEvent) => {
-        const hue = (event.target as HTMLInputElement).value;
+    const changeColor = (event: InputEvent | React.FormEvent<HTMLElement>) => {
+        const target = event.target as HTMLInputElement | null;
+        if (!target) return;
+        const hue = target.value;
         setColors(parseInt(hue));
         localStorage.setItem('hueValue', hue);
     };
@@ -32,29 +34,22 @@ const ThemeChanger = (Props: Options) => {
         <div className={Props.IsActive ? "visible" : ""} id="theme-changer">
             <div>
                 <h2>Theme Controls</h2>
-                {/* @ts-ignore */}
-                <md-list-item type="button" id="themeCopy" onClick={copyColor} suppressHydrationWarning>
+                <md-list-item type="button" id="themeCopy" onClick={copyColor}>
                     <span className="material-symbols-outlined" ref={copyBtnText}>Content_Copy</span>
-                {/* @ts-ignore */}
                 </md-list-item>
             </div>
 
             <div>
                 <p>Hue</p>
-                {/* @ts-ignore */}
-                <md-slider id="hue-slider" min="0" max="360" value={Props.Hue} onInput={changeColor} suppressHydrationWarning></md-slider>
+                <md-slider id="hue-slider" min="0" max="360" value={Props.Hue} onInput={changeColor}></md-slider>
                 <div className="hue" id="hue-display"></div>
             </div>
             <div>
-                {/* @ts-ignore */}
-                <md-outlined-button title="Enable Dark Mode" id="darkmodeon" onClick={darkMode} suppressHydrationWarning>
+                <md-outlined-button title="Enable Dark Mode" id="darkmodeon" onClick={darkMode}>
                     <span className="material-symbols-outlined">Dark_Mode</span>
-                {/* @ts-ignore */}
                 </md-outlined-button>
-                {/* @ts-ignore */}
-                <md-outlined-button title="Enable Light Mode" id="lightmodeon" onClick={lightMode} suppressHydrationWarning>
+                <md-outlined-button title="Enable Light Mode" id="lightmodeon" onClick={lightMode}>
                     <span className="material-symbols-outlined">Light_Mode</span>
-                {/* @ts-ignore */}
                 </md-outlined-button>
             </div>
         </div>

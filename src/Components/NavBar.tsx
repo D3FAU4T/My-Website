@@ -1,7 +1,7 @@
 "use client";
 
-import '@material/web/list/list';
-import '@material/web/list/list-item';
+import '@material/web/list/list.js';
+import '@material/web/list/list-item.js';
 
 import OnrizonSVG from "@/SVG/Onrizon";
 import WordlesSVG from "@/SVG/Wordle";
@@ -31,51 +31,35 @@ const NavBar = (Props: Options) => {
 
     return (
         <aside className="navbar" ref={bar}>
-            {/* @ts-ignore */}
-            <md-list className="scrollbar-wrapper" role="menubar" suppressHydrationWarning>
-                {/* @ts-ignore */}
-                <md-item role="menuitem" suppressHydrationWarning>
+            <md-list className="scrollbar-wrapper" role="menubar">
+                <md-list-item>
                     <div slot="headline">Study Materials</div>
                     <span slot="end" className="material-symbols-outlined">collections_bookmark</span>
-                    {/* @ts-ignore */}
-                </md-item>
-                {/* @ts-ignore */}
-                <md-list-item type="button" id="Syllabus" onClick={() => router.push('/syllabus')} suppressHydrationWarning>
-                    <p>Syllabus</p>
-                    <span slot="start" className="material-symbols-outlined">description</span>
-                    {/* @ts-ignore */}
                 </md-list-item>
-                {/* @ts-ignore */}
-                <md-list-item type="button" id="MAR" onClick={() => router.push('/marpts')} suppressHydrationWarning>
+                <md-list-item type="button" id="Syllabus" onClick={() => router.push('/syllabus')}>
+                    <p>Study Materials</p>
+                    <span slot="start" className="material-symbols-outlined">description</span>
+                </md-list-item>
+                <md-list-item type="button" id="MAR" onClick={() => router.push('/marpts')}>
                     <p>MAR Points</p>
                     <span slot="start" className="material-symbols-outlined">event_note</span>
-                    {/* @ts-ignore */}
                 </md-list-item>
-                {/* @ts-ignore */}
-                <md-item suppressHydrationWarning>
+                <md-list-item>
                     <div slot="headline">Games</div>
-                    <span slot="end" className="material-symbols-outlined">Stadia_Controller</span>
-                    {/* @ts-ignore */}
-                </md-item>
-                {/* @ts-ignore */}
-                <md-list-item type="button" id="Onrizon Games" onClick={() => router.push('/onrizongames')} suppressHydrationWarning>
+                    <span slot="end" className="material-symbols-outlined">stadia_controller</span>
+                </md-list-item>
+                <md-list-item type="button" id="Onrizon Games" onClick={() => router.push('/onrizongames')}>
                     <p>Onrizon Games</p>
                     <OnrizonSVG />
-                    {/* @ts-ignore */}
                 </md-list-item>
-                {/* @ts-ignore */}
-                <md-list-item type="button" id="Wordles" onClick={() => router.push('/wordles')} suppressHydrationWarning>
+                <md-list-item type="button" id="Wordles" onClick={() => router.push('/wordles')}>
                     <p>Wordles</p>
                     <WordlesSVG />
-                    {/* @ts-ignore */}
                 </md-list-item>
-                {/* @ts-ignore */}
-                <md-list-item type="button" id="Community Games" onClick={() => router.push('/communitygames')} suppressHydrationWarning>
+                <md-list-item type="button" id="Community Games" onClick={() => router.push('/communitygames')}>
                     <p>Community Games</p>
                     <span slot="start" className="material-symbols-outlined">games</span>
-                    {/* @ts-ignore */}
                 </md-list-item>
-                {/* @ts-ignore */}
             </md-list>
         </aside>
     )
