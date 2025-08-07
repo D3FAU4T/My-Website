@@ -1,9 +1,11 @@
-import path from 'path';
+'use client';
+
+import { useEffect, useState } from 'react';
 import Link from "next/link";
 import PageLayout from "@/Components/PageLayout";
 import Summary from "@/Components/Summary";
-import { readFile } from 'fs/promises';
 import type { SemesterData, SummaryType, SyllabusMetadata } from "@/Shared/typings";
+import { cachedFetch } from "@/lib/cache";
 
 const renderSemesterTable = (semester: SemesterData) => (
     <div key={semester.id}>
@@ -23,7 +25,7 @@ const renderSemesterTable = (semester: SemesterData) => (
                         <td>{subject.name}</td>
                         <td>{
                             subject.syllabusPath ?
-                                <Link href={subject.syllabusPath}>Download</Link>
+                                <Link href={`/api/syllabus/pdf/${subject.syllabusPath.split('/').pop()}`}>Download</Link>
                                 : "Not Available"
                         }</td>
                     </tr>
@@ -35,12 +37,46 @@ const renderSemesterTable = (semester: SemesterData) => (
     </div>
 );
 
-const Syllabus = async () => {
-    const filePath = path.join(process.cwd(), 'public', 'Data', 'Syllabus.json');
-    const fileContents = await readFile(filePath, 'utf8');
-    const syllabusData: SyllabusMetadata = JSON.parse(fileContents);
-    const semesterData = syllabusData.semesters;
+const Syllabus = () => {
+    const [syllabusData, setSyllabusData] = useState<SyllabusMetadata | null>(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
 
+    useEffect(() => {
+        const fetchSyllabusData = async () => {
+            try {
+                const data = await cachedFetch('/api/syllabus', undefined, 5 * 60 * 1000); // Cache for 5 minutes
+                setSyllabusData(data);
+            }
+            
+            catch (err) { setError(err instanceof Error ? err.message : 'An error occurred'); }            
+            finally { setLoading(false); }
+        };
+
+        fetchSyllabusData();
+    }, []);
+
+    if (loading)
+        return (
+            <PageLayout>
+                <main>
+                    <h1 className="page-title">Syllabus</h1>
+                    <p>Loading syllabus data...</p>
+                </main>
+            </PageLayout>
+        );
+
+    if (error || !syllabusData)
+        return (
+            <PageLayout>
+                <main>
+                    <h1 className="page-title">Syllabus</h1>
+                    <p>Error loading syllabus: {error}</p>
+                </main>
+            </PageLayout>
+        );
+
+    const semesterData = syllabusData.semesters;
     const summaries: SummaryType[] = semesterData.map(semester => ({
         Name: semester.title,
         Link: semester.id,

@@ -10,9 +10,6 @@ export type NavBarButton = {
     Icon: string | null;
     Id?: string;
     SVG?: string;
-    // SVG?: React.FunctionComponent<React.SVGProps<SVGSVGElement> & {
-    //     title?: string;
-    // }> | null;
 }
 
 export type GameOptions = {
@@ -21,6 +18,7 @@ export type GameOptions = {
     Image: string;
     Link: string;
     ID: string;
+    imageData?: string; // Base64 image data from database
 }
 
 export interface WordleOptions extends GameOptions {

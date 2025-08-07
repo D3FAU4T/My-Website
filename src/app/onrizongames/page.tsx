@@ -4,11 +4,13 @@ import Summary from "@/Components/Summary";
 import { SummaryType } from "@/Shared/typings";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { cachedFetch } from "@/lib/cache";
 
 interface OnrizonGame {
     id: string;
     name: string;
     image: string;
+    imageData?: string;
     link: string;
     description: string;
 }
@@ -19,13 +21,14 @@ const OnrizonGames = () => {
     const [data, setData] = useState<OnrizonData | null>(null);
 
     useEffect(() => {
-        fetch(window.location.origin + '/Data/Onrizon.json')
-            .then(res => res.json())
+        cachedFetch('/api/onrizon-games', undefined, 5 * 60 * 1000) // Cache for 5 minutes
             .then(response => setData(response))
-            .catch(err => setData([]));
+            .catch(err => {
+                console.error('Failed to fetch onrizon games:', err);
+                setData([]);
+            });
     }, []);
 
-    // Dynamically generate summaries from the fetched data
     const summaries: SummaryType[] = data ? data.map(game => ({
         Name: game.name,
         Link: game.id,
@@ -55,7 +58,11 @@ const OnrizonGames = () => {
                     {data?.map(game => (
                         <Link key={game.id} id={game.id} href={game.link} target="_blank" rel="noopener">
                             <div>
-                                <img src={game.image} alt={game.name} />
+                                <img
+                                    src={game.imageData || game.image}
+                                    alt={game.name}
+                                    style={{ width: '100%', height: 'auto' }}
+                                />
                             </div>
                             <div>
                                 <h2>{game.name}</h2>

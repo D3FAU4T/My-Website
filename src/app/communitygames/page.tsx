@@ -4,8 +4,8 @@ import PageLayout from "@/Components/PageLayout";
 import Summary from "@/Components/Summary";
 import { GameOptions, SummaryType } from "@/Shared/typings";
 import { useEffect, useState } from "react";
+import { cachedFetch } from "@/lib/cache";
 
-// Configuration for categories with their display info
 const categoryConfig = {
     word: {
         title: "Word games:",
@@ -38,16 +38,34 @@ const CommunityGames = () => {
     const [data, setData] = useState<Record<string, GameOptions[]> | null>(null);
 
     useEffect(() => {
-        fetch(window.location.origin + '/Data/CommunityGames.json')
-            .then(res => res.json())
-            .then(response => setData(response))
-            .catch(err => setData({}));
+        cachedFetch('/api/community-games', undefined, 5 * 60 * 1000) // Cache for 5 minutes
+            .then(response => {
+                const groupedData: Record<string, GameOptions[]> = {};
+                response.forEach((game: any) => {
+                    if (!groupedData[game.category]) {
+                        groupedData[game.category] = [];
+                    }
+                    groupedData[game.category].push({
+                        Name: game.name,
+                        ID: game.id,
+                        Image: game.image,
+                        Link: game.link,
+                        Description: game.description,
+                        imageData: game.imageData
+                    });
+                });
+                setData(groupedData);
+            })
+            .catch(err => {
+                console.error('Failed to fetch community games:', err);
+                setData({});
+            });
     }, []);
 
     const summaries: SummaryType[] = data ? Object.keys(categoryConfig).map(categoryKey => {
         const category = categoryConfig[categoryKey as keyof typeof categoryConfig];
         const games = data[categoryKey] || [];
-        
+
         return {
             Name: category.title.replace(':', ''),
             Link: category.id,
@@ -71,7 +89,7 @@ const CommunityGames = () => {
                 {data && Object.keys(categoryConfig).map((categoryKey, index) => {
                     const category = categoryConfig[categoryKey as keyof typeof categoryConfig];
                     const games = data[categoryKey] || [];
-                    
+
                     return (
                         <div key={categoryKey}>
                             <div className="iconed-heading">
@@ -81,13 +99,14 @@ const CommunityGames = () => {
 
                             <div className="card-container">
                                 {games.map(game => (
-                                    <Game 
-                                        key={game.ID} 
-                                        Name={game.Name} 
-                                        ID={game.ID} 
-                                        Image={game.Image} 
-                                        Link={game.Link} 
-                                        Description={game.Description} 
+                                    <Game
+                                        key={game.ID}
+                                        Name={game.Name}
+                                        ID={game.ID}
+                                        Image={game.Image}
+                                        Link={game.Link}
+                                        Description={game.Description}
+                                        imageData={game.imageData}
                                     />
                                 ))}
                             </div>
