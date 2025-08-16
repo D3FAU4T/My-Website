@@ -23,7 +23,7 @@ const renderSemesterTable = (semester: SemesterData) => (
                         <td>{subject.name}</td>
                         <td>{
                             subject.syllabusPath ?
-                                <Link href={subject.syllabusPath}>Download</Link>
+                                <Link href={subject.syllabusPath}>Open</Link>
                                 : "Not Available"
                         }</td>
                     </tr>

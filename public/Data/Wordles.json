@@ -1,0 +1,108 @@
+[
+    {
+        "id": "w1",
+        "name": "Wordle",
+        "image": "/Assets/Wordle.jpeg",
+        "link": "https://powerlanguage-wordle.github.io/",
+        "description": "The classic game where you guess a five-letter word in six tries or less by receiving feedback on correct letters and their positions.",
+        "badgeLabel": "1"
+    },
+    {
+        "id": "w2",
+        "name": "Dordle",
+        "image": "/Assets/Dordle.jpeg",
+        "link": "https://dordlewordle.com/",
+        "description": "You can do 1 Wordle. But can you do 2 Wordles simultaneously?",
+        "badgeLabel": "2"
+    },
+    {
+        "id": "w3",
+        "name": "Trodle",
+        "image": "/Assets/Trodle.jpeg",
+        "link": "https://hexordle.com/?mode=freeT",
+        "description": "Inspired from the other Wordle games, Trodle is a combination of 3 Wordles simultaneously",
+        "badgeLabel": "3"
+    },
+    {
+        "id": "w4",
+        "name": "Quordle",
+        "image": "/Assets/Quordle.jpeg",
+        "link": "https://quordlegame.com/",
+        "description": "Same as Wordle except you've to do 4 different Wordles simultaneously.",
+        "badgeLabel": "4"
+    },
+    {
+        "id": "w6",
+        "name": "Hexordle",
+        "image": "/Assets/Hexordle.jpeg",
+        "link": "https://hexordle.com/?mode=free",
+        "description": "Made by Jeffrey Chen in 2022, Hexordle is 6 different Wordles at the same time.",
+        "badgeLabel": "6"
+    },
+    {
+        "id": "w8",
+        "name": "Octordle",
+        "image": "/Assets/Octordle.jpeg",
+        "link": "https://octordle.org/",
+        "description": "Same as Wordle except you've to do 8 different Wordles simultaneously.",
+        "badgeLabel": "8"
+    },
+    {
+        "id": "w16",
+        "name": "Sedecordle",
+        "image": "/Assets/Sedecordle.jpeg",
+        "link": "https://sedecordlegame.org/",
+        "description": "Same as Wordle except you've to do 16 different Wordles simultaneously.",
+        "badgeLabel": "16"
+    },
+    {
+        "id": "w32",
+        "name": "Duotrigordle",
+        "image": "/Assets/Duotrigordle.jpeg",
+        "link": "https://duotrigordle.com/",
+        "description": "Same as Wordle except you've to do 32 different Wordles simultaneously because why not '-'",
+        "badgeLabel": "32"
+    },
+    {
+        "id": "w64",
+        "name": "Sexaginta-Quattuordle",
+        "image": "/Assets/Sexagintaquattuordle.jpeg",
+        "link": "https://64ordle.au/",
+        "description": "Same as Wordle except you've to do 64 different Wordles simultaneously. You can do it 🤌",
+        "badgeLabel": "64"
+    },
+    {
+        "id": "w1000",
+        "name": "Kilordle",
+        "image": "/Assets/Kilordle.jpeg",
+        "link": "https://jonesnxt.github.io/kilordle/",
+        "description": "Wordle is fun. How about a thousand of them at the same time. How does that feel?",
+        "badgeLabel": "1000"
+    },
+    {
+        "id": "w10000",
+        "name": "Myriadle",
+        "image": "/Assets/Myriadle.jpeg",
+        "link": "https://myriadle.semrai.com/",
+        "description": "No, there is no extra zero by mistake. That is ten thousand, yes you read it right. 10k Wordles.",
+        "badgeLabel": "10000"
+    },
+    {
+        "id": "wq",
+        "name": "QWordle",
+        "image": "/Assets/QWordle.jpeg",
+        "link": "https://qwordle.bhat.ca/",
+        "description": "The Q in Wordle stands for 'Quantum' where there are 2 different Wordles merged into an entangled-pair.",
+        "badgeLabel": "Quantum",
+        "badgeIconName": "science"
+    },
+    {
+        "id": "plygn",
+        "name": "Polygonle",
+        "image": "/Assets/Polygonle.jpeg",
+        "link": "https://polygonle.com/",
+        "description": "Polygonle features a character cursor for visualizing words without filling every letter. Click a tile to fill it and navigate the cursor with spacebar or arrow keys instead of typing.",
+        "badgeLabel": "Shape",
+        "badgeIconName": "shapes"
+    }
+]

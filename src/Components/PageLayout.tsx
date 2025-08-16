@@ -6,15 +6,17 @@ import '@material/web/list/list-item';
 import NavBar from './NavBar';
 import ThemeChanger from '@/Components/ThemeChanger';
 
-import { useState, useEffect } from "react";
-import { setColors, setThemeMode } from '@/Shared/functions';
+import { useState, useEffect, Children, isValidElement, cloneElement } from "react";
+import type { CSSProperties, ReactElement } from "react";
+import { isMobileDevice, setColors, setThemeMode } from '@/Shared/functions';
 
 import { styles as typescaleStyles } from "@material/web/typography/md-typescale-styles";
 
 const PageLayout = ({ children }: { children: React.ReactNode }) => {
     const [themeChangerVisibility, setThemeChangerVisibility] = useState(false);
-    const [hamburgerState, setHamburgerState] = useState(false);
+    const [hamburgerState, setHamburgerState] = useState(true);
     const [hueVal, setHueVal] = useState(0);
+    const [isMobile, setIsMobile] = useState<boolean | null>(null);
 
     const themeChangerClick = () => setThemeChangerVisibility(!themeChangerVisibility);
     const hamburgerClick = () => setHamburgerState(!hamburgerState);
@@ -27,6 +29,9 @@ const PageLayout = ({ children }: { children: React.ReactNode }) => {
         setHueVal(hueLocal);
         setThemeMode(localStorage.getItem('theme') as 'white' | 'dark' | null || 'dark');
         setColors(hueLocal);
+        const mobile = isMobileDevice();
+        setIsMobile(mobile);
+        setHamburgerState(!mobile);
     }, []);
 
     return (
@@ -35,7 +40,7 @@ const PageLayout = ({ children }: { children: React.ReactNode }) => {
                 <div>
                     {/* @ts-ignore */}
                     <md-list-item type="button" id="hamBtn" onClick={hamburgerClick} suppressHydrationWarning>
-                        <span className="material-symbols-outlined">Menu</span>
+                        <span className="material-symbols-outlined">{hamburgerState ? 'Menu_Open' : 'Menu'}</span>
                         {/* @ts-ignore */}
                     </md-list-item>
                 </div>
@@ -55,7 +60,23 @@ const PageLayout = ({ children }: { children: React.ReactNode }) => {
 
             <div className={`container ${hamburgerState ? 'navbar-open' : ''}`}>
                 <NavBar IsActive={hamburgerState} />
-                {children}
+                {Children.map(children, (child) => {
+                    if (!isValidElement(child)) return child;
+                    if (typeof child.type === 'string' && child.type === 'main') {
+                        // Avoid injecting dynamic styles on mobile devices.
+                        // Also avoid SSR/client mismatch by waiting until isMobile is known.
+                        if (isMobile === null || isMobile === true) return child;
+                        const mainEl = child as ReactElement<{ style?: CSSProperties }>;
+                        const existingStyle = (mainEl.props?.style ?? {}) as CSSProperties;
+                        return cloneElement(mainEl, {
+                            style: {
+                                ...existingStyle,
+                                marginLeft: hamburgerState ? '0rem' : '2rem',
+                            } as CSSProperties,
+                        });
+                    }
+                    return child;
+                })}
             </div>
         </>
     );

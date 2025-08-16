@@ -7,7 +7,7 @@ import OnrizonSVG from "@/SVG/Onrizon";
 import WordlesSVG from "@/SVG/Wordle";
 
 import { useRouter } from 'next/navigation';
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useLayoutEffect } from "react";
 
 interface Options {
     IsActive: boolean;
@@ -22,11 +22,20 @@ const NavBar = (Props: Options) => {
     const closeSidebar = () => bar.current!.classList.remove('open');
     const openSidebar = () => bar.current!.classList.add('open');
 
+    useLayoutEffect(() => {
+        const el = bar.current;
+        if (!el) return;
+        const prev = el.style.transition;
+        el.style.transition = 'none';
+        if (Props.IsActive) openSidebar(); else closeSidebar();
+        void el.offsetHeight;
+        el.style.transition = prev;
+    }, []);
+
     useEffect(() => {
         if (Props.IsActive)
             openSidebar();
-        else
-            closeSidebar();
+        else closeSidebar();
     }, [Props.IsActive]);
 
     return (

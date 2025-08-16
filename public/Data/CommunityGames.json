@@ -69,6 +69,20 @@
             "Image": "/Assets/Decipher.png",
             "Link": "https://decipher.wtf/",
             "Description": "Decipher the cryptogram by figuring out which original letter each substituted letter represents."
+        },
+        {
+            "Name": "Word Grid",
+            "ID": "word_grid",
+            "Image": "/Assets/Wordgrid.png",
+            "Link": "https://wordgrid.clevergoat.com/",
+            "Description": "Fill the grid with words based on the given criteria. It's a fun and challenging word puzzle that tests your vocabulary and lateral thinking!"
+        },
+        {
+            "Name": "Blossom",
+            "ID": "blossom",
+            "Image": "/Assets/Blossom.png",
+            "Link": "https://blossomwordgame.io/game/blossom/",
+            "Description": "Can you make 12 words using 7 letters?"
         }
     ],
     "geography": [
@@ -187,7 +201,7 @@
             "Name": "Moviedle",
             "Description": "Guess the movie from a fast-paced compilation of scenes. Test your film knowledge and quick thinking with this exciting movie quiz!",
             "Image": "/Assets/Moviedle.jpeg",
-            "Link": "https://likewisetv.com/arcade/moviedle",
+            "Link": "https://likewise.com/games/moviedle",
             "ID": "moviedle"
         },
         {

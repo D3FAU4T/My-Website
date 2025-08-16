@@ -1,8 +1,8 @@
 "use client";
+import Link from "next/link";
 import PageLayout from "@/Components/PageLayout"
 import Summary from "@/Components/Summary";
 import { SummaryType } from "@/Shared/typings";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 
 interface OnrizonGame {
@@ -25,7 +25,6 @@ const OnrizonGames = () => {
             .catch(err => setData([]));
     }, []);
 
-    // Dynamically generate summaries from the fetched data
     const summaries: SummaryType[] = data ? data.map(game => ({
         Name: game.name,
         Link: game.id,

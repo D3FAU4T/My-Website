@@ -37,3 +37,15 @@ export const setThemeMode = (mode: "white" | "dark") => {
         localStorage.setItem('theme', 'dark');
     }
 }
+
+export const isMobileDevice = () => {
+    if (typeof window === 'undefined')
+        return false;
+    
+    const userAgent = navigator.userAgent.toLowerCase();
+    const mobileKeywords = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i;
+        
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+    return mobileKeywords.test(userAgent) || isTouchDevice;
+};
