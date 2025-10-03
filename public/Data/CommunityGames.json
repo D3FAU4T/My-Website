@@ -83,6 +83,13 @@
             "Image": "/Assets/Blossom.png",
             "Link": "https://blossomwordgame.io/game/blossom/",
             "Description": "Can you make 12 words using 7 letters?"
+        },
+        {
+            "Name": "One Word Search",
+            "ID": "onewordsearch",
+            "Image": "/Assets/OneWordSearch.png",
+            "Link": "https://puzzlist.com/onewordsearch/",
+            "Description": "The simple but challenging, daily, zen wordsearch."
         }
     ],
     "geography": [
@@ -127,6 +134,13 @@
             "Image": "/Assets/Tradle.jpeg",
             "Link": "https://tradle.net/",
             "Description": "Explore the world of trade interactively, enhancing your understanding without extensive research. Guess which country exports the given goods in 6 guesses"
+        },
+        {
+            "Name": "Travle",
+            "ID": "travle",
+            "Image": "/Assets/Travle.png",
+            "Link": "https://travle.earth/",
+            "Description": "A daily game, get between countries in as few guesses as possible!"
         }
     ],
     "math": [
