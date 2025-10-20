@@ -11,27 +11,16 @@
   "dependencies": {
     "@material/web": "^2.4.0",
     "cheerio": "^1.1.2",
-<<<<<<< HEAD
     "marked": "^16.4.1",
     "next": "15.5.6",
-=======
-    "marked": "^16.3.0",
-    "next": "15.5.4",
->>>>>>> c2b36dd8c83b751f8db8b2c116bc552effc8f7a0
     "react": "19.2.0",
     "react-dom": "19.2.0"
   },
   "devDependencies": {
     "@types/marked": "^6.0.0",
-<<<<<<< HEAD
     "@types/node": "^24.9.0",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
-=======
-    "@types/node": "^24.6.2",
-    "@types/react": "^19.2.0",
-    "@types/react-dom": "^19.2.0",
->>>>>>> c2b36dd8c83b751f8db8b2c116bc552effc8f7a0
     "typescript": "^5.9.3"
   }
 }
