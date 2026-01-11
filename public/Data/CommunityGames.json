@@ -90,6 +90,13 @@
             "Image": "/Assets/OneWordSearch.png",
             "Link": "https://puzzlist.com/onewordsearch/",
             "Description": "The simple but challenging, daily, zen wordsearch."
+        },
+        {
+            "Name": "Betweenle",
+            "ID": "betweenle",
+            "Image": "/Assets/Betweenle.png",
+            "Link": "https://betweenle.com/",
+            "Description": "Guess the hidden word by narrowing down its position in the dictionary. You get feedback on whether the secret word is alphabetically before or after your guess."
         }
     ],
     "geography": [
