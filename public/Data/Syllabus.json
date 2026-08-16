@@ -276,59 +276,29 @@
             "title": "7th Semester",
             "subjects": [
                 {
-                    "code": "BCAC701A",
-                    "name": "Data Mining & Data Warehousing",
-                    "syllabusPath": null
-                },
-                {
                     "code": "BCAC701B",
                     "name": "Machine Learning",
-                    "syllabusPath": null
-                },
-                {
-                    "code": "BCAC701C",
-                    "name": "Pattern Recognition",
-                    "syllabusPath": null
-                },
-                {
-                    "code": "BCAC701D",
-                    "name": "Algorithm Analysis",
-                    "syllabusPath": null
-                },
-                {
-                    "code": "BCAC791A",
-                    "name": "Data Mining & Data Warehousing Lab",
-                    "syllabusPath": null
+                    "syllabusPath": "../Syllabus/Sem-7/ML.pdf"
                 },
                 {
                     "code": "BCAC791B",
                     "name": "Machine Learning Lab",
-                    "syllabusPath": null
-                },
-                {
-                    "code": "BCAC791C",
-                    "name": "Pattern Recognition Lab",
-                    "syllabusPath": null
-                },
-                {
-                    "code": "BCAC791D",
-                    "name": "Algorithm Analysis Lab",
-                    "syllabusPath": null
+                    "syllabusPath": "../Syllabus/Sem-7/MLLab.pdf"
                 },
                 {
                     "code": "BCAC702",
                     "name": "Research Methodology",
-                    "syllabusPath": null
+                    "syllabusPath": "../Syllabus/Sem-7/Research.pdf"
                 },
                 {
                     "code": "BCAC792",
                     "name": "Research Methodology Lab",
-                    "syllabusPath": null
+                    "syllabusPath": "../Syllabus/Sem-7/Research.pdf"
                 },
                 {
                     "code": "BCAC703",
                     "name": "Cyber Security",
-                    "syllabusPath": null
+                    "syllabusPath": "../Syllabus/Sem-7/Cyber-Security.pdf"
                 },
                 {
                     "code": "MIM701",
@@ -336,9 +306,9 @@
                     "syllabusPath": "../Syllabus/Sem-7/Consumer-Behaviour.pdf"
                 },
                 {
-                    "code": "MIM702",
-                    "name": "Strategic Management",
-                    "syllabusPath": "../Syllabus/Sem-7/Strategic-Management.pdf"
+                    "code": "MIM702B",
+                    "name": "Intellectual Property Rights",
+                    "syllabusPath": "../Syllabus/Sem-7/Intellectual-Property-Rights.pdf"
                 }
             ]
         },
